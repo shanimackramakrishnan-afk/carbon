@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account | Waste Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+    background-size:cover;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container{
+    background:white;
+    width:420px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    text-align:center;
+}
+
+h2{
+    color:#2e7d32;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+input:focus{
+    border-color:#2e7d32;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+.language-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:white;
+    border:none;
+    padding:6px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.login-link{
+    margin-top:15px;
+}
+
+.login-link a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="language-btn" onclick="toggleLanguage()">മലയാളം</button>
+
+<div class="container">
+
+<h2 id="title">Create User Account</h2>
+<form action="{{ url_for('register_submit') }}" method="POST">
+
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Mobile Number (10 digits)" required>
+
+<input type="text" name="aadhaar" pattern="[0-9]{12}" maxlength="12" placeholder="Aadhaar Number (12 digits)" required>
+
+<input type="password" name="password" placeholder="Create Password" required>
+
+<button type="submit" id="createBtn">Register</button>
+
+</form>
+<div style="margin-top:15px;">
+    <a href="{{ url_for('login') }}" 
+       style="text-decoration:none;color:#2e7d32;font-weight:600;">
+        Already have an account? Login
+    </a>
+</div>
+
+</div>
+
+<script>
+
+let malayalam=false;
+
+function toggleLanguage(){
+
+malayalam=!malayalam;
+
+if(malayalam){
+
+document.querySelector(".language-btn").innerText="English";
+document.getElementById("title").innerText="ഉപയോക്തൃ അക്കൗണ്ട് സൃഷ്ടിക്കുക";
+
+document.querySelector("input[name='name']").placeholder="പൂർണ്ണ പേര്";
+document.querySelector("input[name='email']").placeholder="ഇമെയിൽ വിലാസം";
+document.querySelector("input[name='mobile']").placeholder="മൊബൈൽ നമ്പർ (10 അക്കങ്ങൾ)";
+document.querySelector("input[name='aadhaar']").placeholder="ആധാർ നമ്പർ (12 അക്കങ്ങൾ)";
+document.querySelector("input[name='password']").placeholder="പാസ്‌വേഡ് സൃഷ്ടിക്കുക";
+
+document.getElementById("createBtn").innerText="രജിസ്റ്റർ ചെയ്യുക";
+document.getElementById("loginLink").innerText="ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യുക";
+
+}else{
+location.reload();
+}
+
+}
+
+</script>
+
+</body>
+</html>

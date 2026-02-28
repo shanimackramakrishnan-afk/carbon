@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plastic Waste Assessment | Carbon Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+    min-height:100vh;
+}
+
+.header{
+    text-align:center;
+    color:white;
+    padding:20px 10px;
+}
+
+.language-btn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:#ffffff;
+    color:#2e7d32;
+    border:none;
+    padding:8px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.container{
+    max-width:850px;
+    margin:20px auto 40px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#2e7d32;
+}
+
+.section{
+    margin-top:25px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
+}
+
+.section h3{
+    color:#1b5e20;
+}
+
+label{
+    font-weight:600;
+    display:block;
+    margin-top:12px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+input:focus,select:focus{
+    border-color:#2e7d32;
+    outline:none;
+}
+
+button.submit{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button.submit:hover{
+    background:#1b5e20;
+}
+
+.note{
+    background:#e8f5e9;
+    padding:12px;
+    border-radius:8px;
+    margin-top:20px;
+    font-size:14px;
+}
+
+.small-note{
+    font-size:12px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<button class="language-btn" onclick="toggleLanguage()">മലയാളം</button>
+
+<div class="header">
+<h2 id="mainHeader">♻ Smart Carbon Footprint Tracker</h2>
+<p id="subHeader">Kerala Household Plastic Waste Monitoring System</p>
+</div>
+
+<div class="container">
+
+<h1 id="formTitle">Plastic Waste Behaviour Assessment</h1>
+<form action="{{ url_for('plastic_submit') }}" method="POST">
+
+<div class="section">
+<h3 id="sec1">Household Information</h3>
+
+<label id="familyLabel">Family size</label>
+<select name="family_size" required>
+<option value="">Select</option>
+<option>1</option>
+<option>2-3</option>
+<option>4-5</option>
+<option>6+</option>
+</select>
+
+<label id="houseLabel">House type</label>
+<select name="house_type" required>
+<option value="">Select</option>
+<option>Apartment</option>
+<option>Small house</option>
+<option>Large house</option>
+</select>
+
+</div>
+
+<div class="section">
+<h3 id="secAddress">Household Identification & Address</h3>
+
+<label id="ownerLabel">House Owner / Resident Name</label>
+<input type="text" name="resident_name" placeholder="Full name as per local body record" required>
+
+<label id="houseNoLabel">House Number</label>
+<input type="text" name="house_no" placeholder="Example: 14/256" required>
+
+<label id="aptLabel">Apartment / Building Name (if applicable)</label>
+<input type="text" name="apartment_name" placeholder="Example: Green Residency">
+
+<label id="flatLabel">Flat / Floor Number (if apartment)</label>
+<input type="text" name="flat_no" placeholder="Example: Flat B-302">
+
+<label id="streetLabel">Street / Colony / Area Name</label>
+<input type="text" name="street" placeholder="Example: MG Road" required>
+
+<label id="landmarkLabel">Nearby Landmark</label>
+<input type="text" name="landmark" placeholder="Example: Near Govt School">
+
+<label id="wardLabel">Ward Number</label>
+<input type="text" name="ward_number" placeholder="Example: Ward 12" required>
+
+<label id="localBodyLabel">Panchayat / Municipality / Corporation</label>
+<input type="text" name="local_body" placeholder="Example: Kochi Corporation" required>
+
+<label id="districtLabel">District</label>
+<select name="district" required>
+<option value="">Select District</option>
+<option>Thiruvananthapuram</option>
+<option>Kollam</option>
+<option>Pathanamthitta</option>
+<option>Alappuzha</option>
+<option>Kottayam</option>
+<option>Idukki</option>
+<option>Ernakulam</option>
+<option>Thrissur</option>
+<option>Palakkad</option>
+<option>Malappuram</option>
+<option>Kozhikode</option>
+<option>Wayanad</option>
+<option>Kannur</option>
+<option>Kasaragod</option>
+</select>
+
+<label id="pincodeLabel">Pincode</label>
+<input type="number" name="pincode" placeholder="680001" required>
+
+</div>
+
+<div class="section">
+<h3 id="sec2">Plastic Usage Pattern (Monthly)</h3>
+
+<label id="milkLabel">How many milk packets are used per day?</label>
+<input type="number" name="milk_packets" min="0" max="10" required>
+<div class="small-note">Used for system-based plastic estimation</div>
+
+<label id="deliveryLabel">How many online deliveries per month?</label>
+<input type="number" name="deliveries" min="0" max="60" required>
+
+<label id="oilLabel">Cooking oil packaging type</label>
+<select name="oil_type" required>
+<option value="">Select</option>
+<option>Plastic packet</option>
+<option>Plastic bottle</option>
+<option>Loose / refill</option>
+</select>
+
+<label id="bottleLabel">How many plastic water/soft drink bottles per week?</label>
+<select name="bottles" required>
+<option value="">Select</option>
+<option>None</option>
+<option>1-3</option>
+<option>4-7</option>
+<option>7+</option>
+</select>
+
+</div>
+
+<div class="section">
+<h3 id="sec3">Waste Collection & Segregation</h3>
+
+<label id="segLabel">Do you segregate plastic waste separately?</label>
+<select name="segregation" required>
+<option value="">Select</option>
+<option>Always</option>
+<option>Sometimes</option>
+<option>Never</option>
+</select>
+
+<label id="hksLabel">How often do you give plastic waste to Haritha Karma Sena?</label>
+<select name="hks_frequency" required>
+<option value="">Select</option>
+<option>Every month</option>
+<option>Every 2-3 months</option>
+<option>Rarely</option>
+<option>Never</option>
+</select>
+
+<label id="receiptLabel">Do you receive official receipt during collection?</label>
+<select name="receipt" required>
+<option value="">Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+</div>
+
+<div class="note">
+<span id="verifyNote">
+⚠ Your plastic quantity will be estimated automatically and cross-verified with Haritha Karma Sena measurements. Providing false information may reduce carbon points.
+</span>
+</div>
+
+<button type="submit" class="submit">Submit Data</button>
+
+</form>
+</div>
+
+<script>
+let malayalam = false;
+function toggleLanguage(){
+    malayalam = !malayalam;
+    if(malayalam){
+        document.querySelector(".language-btn").innerText="English";
+        document.getElementById("mainHeader").innerText="♻ സ്മാർട്ട് കാർബൺ ഫുട്പ്രിന്റ് ട്രാക്കർ";
+        document.getElementById("subHeader").innerText="കേരള ഗൃഹ പ്ലാസ്റ്റിക് മാലിന്യ നിരീക്ഷണ സംവിധാനം";
+        document.getElementById("formTitle").innerText="പ്ലാസ്റ്റിക് ഉപയോഗവും മാലിന്യവും വിലയിരുത്തൽ";
+
+        document.getElementById("sec1").innerText="കുടുംബ വിവരങ്ങൾ";
+        document.getElementById("familyLabel").innerText="കുടുംബാംഗങ്ങളുടെ എണ്ണം";
+        document.getElementById("houseLabel").innerText="വീട്ടിന്റെ തരം";
+        document.getElementById("secAddress").innerText="കുടുംബ തിരിച്ചറിയലും വിലാസവും";
+
+        document.getElementById("ownerLabel").innerText="വീട്ടുടമ / താമസക്കാരന്റെ പേര്";
+        document.getElementById("houseNoLabel").innerText="വീട് നമ്പർ";
+        document.getElementById("aptLabel").innerText="അപ്പാർട്മെന്റ് / ബിൽഡിംഗ് പേര് (ഉണ്ടെങ്കിൽ)";
+        document.getElementById("flatLabel").innerText="ഫ്ലാറ്റ് / നില നമ്പർ (അപ്പാർട്മെന്റ് ആണെങ്കിൽ)";
+        document.getElementById("streetLabel").innerText="വീഥി / കോളനി / പ്രദേശം";
+        document.getElementById("landmarkLabel").innerText="അടുത്തുള്ള പ്രധാന സ്ഥലത്തിന്റെ പേര്";
+        document.getElementById("wardLabel").innerText="വാർഡ് നമ്പർ";
+        document.getElementById("localBodyLabel").innerText="പഞ്ചായത്ത് / മുനിസിപ്പാലിറ്റി / കോർപ്പറേഷൻ";
+        document.getElementById("districtLabel").innerText="ജില്ല";
+        document.getElementById("pincodeLabel").innerText="പിൻകോഡ്";
+
+        document.getElementById("sec2").innerText="മാസാന്ത്യ പ്ലാസ്റ്റിക് ഉപയോഗ മാതൃക";
+        document.getElementById("milkLabel").innerText="ഒരു ദിവസത്തിൽ ഉപയോഗിക്കുന്ന പാല്പാക്കറ്റുകളുടെ എണ്ണം?";
+        document.getElementById("deliveryLabel").innerText="ഒരു മാസത്തിൽ ഓൺലൈൻ ഡെലിവറികളുടെ എണ്ണം?";
+        document.getElementById("oilLabel").innerText="പാചക എണ്ണയുടെ പാക്കേജിംഗ് തരം";
+        document.getElementById("bottleLabel").innerText="ഒരു ആഴ്ചയിൽ ഉപയോഗിക്കുന്ന പ്ലാസ്റ്റിക് ബോട്ടിലുകളുടെ എണ്ണം?";
+
+        document.getElementById("sec3").innerText="മാലിന്യ ശേഖരണവും വേർതിരിവും";
+        document.getElementById("segLabel").innerText="പ്ലാസ്റ്റിക് മാലിന്യം വേർതിരിച്ചുവെക്കാറുണ്ടോ?";
+        document.getElementById("hksLabel").innerText="ഹരിത കർമസേനയ്ക്ക് എത്ര ഇടവേളയ്ക്ക് കൈമാറുന്നു?";
+        document.getElementById("receiptLabel").innerText="ശേഖരണ സമയത്ത് രസീത് ലഭിക്കുന്നുണ്ടോ?";
+
+        document.getElementById("verifyNote").innerText="⚠ പ്ലാസ്റ്റിക് അളവ് സിസ്റ്റം സ്വയം കണക്കാക്കുകയും ഹരിത കർമസേനയുടെ അളവുകളുമായി പരിശോധിക്കുകയും ചെയ്യും. തെറ്റായ വിവരങ്ങൾ കാർബൺ പോയിന്റ് കുറയ്ക്കും.";
+    } else {
+        location.reload();
+    }
+}
+</script>
+
+</body>
+</html>

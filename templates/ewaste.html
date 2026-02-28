@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Waste Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>E-Waste Questionnaire</h2>
+
+<form action="/ewaste" method="POST">
+
+<label>Number of unused electronic devices:</label><br>
+<input type="number" name="devices" required><br><br>
+
+<label>Do you recycle e-waste properly?</label><br>
+<select name="ewaste_recycle" required>
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+</select><br><br>
+
+<label>Type of common e-waste:</label><br>
+<select name="ewaste_type">
+    <option value="mobile">Mobile</option>
+    <option value="laptop">Laptop</option>
+    <option value="battery">Battery</option>
+    <option value="appliance">Appliance</option>
+</select><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
