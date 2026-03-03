@@ -266,15 +266,15 @@ def ewaste_submit():
     conn.commit()
     conn.close()
 
-    return redirect(url_for("successful"))
+    return redirect(url_for("success"))
 
 
 # ---------------- SUCCESS PAGE ----------------
-@app.route("/successful")
-def successful():
+@app.route("/success")
+def success():
     if "user" not in session:
         return redirect(url_for("login"))
-    return render_template("successful.html")
+    return render_template("success.html")
 
 
 # ---------------- RUN APP ----------------

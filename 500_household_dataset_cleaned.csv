@@ -1,0 +1,502 @@
+user_email,family_size,house_type,district,milk_packets,deliveries,oil_type,bottles,segregation,food_waste,compost,garden_waste,old_devices,batteries,disposal_method
+ckshanima2005@gmail.com,2-3,Apartment,Palakkad,2,10,Plastic packet,1-3,Always,250g_500g,home_compost,daily,12,1-2,recycle
+user1@gmail.com,2-3,Apartment,Kollam,2,19,Plastic bottle,,Never,250g_500g,collector,daily,0,6+,recycle
+user2@gmail.com,2-3,Large house,Kottayam,1,19,Plastic bottle,,Sometimes,250g_500g,collector,no,0,3-5,recycle
+user3@gmail.com,4-5,Small house,Malappuram,4,17,Plastic packet,4-7,Always,250g_500g,home_compost,no,0,none,sell
+user4@gmail.com,4-5,Large house,Malappuram,4,7,Loose / refill,,Never,250g_500g,worm_compost,monthly,0,6+,recycle
+user5@gmail.com,4-5,Large house,Kannur,4,9,Plastic bottle,7+,Never,500g_1kg,biomethanation,daily,0,1-2,recycle
+user6@gmail.com,2-3,Apartment,Pathanamthitta,1,5,Plastic packet,,Always,250g_500g,biomethanation,daily,0,3-5,sell
+user7@gmail.com,2-3,Apartment,Kasaragod,2,16,Loose / refill,7+,Sometimes,250g_500g,biomethanation,weekly,0,6+,store
+user8@gmail.com,2-3,Large house,Thrissur,3,2,Plastic bottle,,Sometimes,250g_500g,home_compost,weekly,0,none,sell
+user9@gmail.com,4-5,Apartment,Idukki,3,18,Plastic packet,1-3,Sometimes,250g_500g,community,monthly,1,3-5,recycle
+user10@gmail.com,1,Large house,Idukki,0,12,Loose / refill,,Always,250g_500g,biomethanation,no,0,6+,recycle
+user11@gmail.com,6+,Apartment,Kollam,6,9,Plastic packet,7+,Never,250g_500g,collector,no,1,1-2,sell
+user12@gmail.com,4-5,Large house,Wayanad,3,9,Plastic packet,1-3,Never,250g_500g,biomethanation,no,0,1-2,sell
+user13@gmail.com,2-3,Apartment,Kottayam,3,20,Plastic packet,,Sometimes,250g_500g,biomethanation,weekly,0,1-2,sell
+user14@gmail.com,4-5,Large house,Pathanamthitta,3,19,Plastic bottle,,Sometimes,250g_500g,biomethanation,weekly,0,6+,sell
+user15@gmail.com,4-5,Large house,Thiruvananthapuram,3,8,Plastic packet,7+,Sometimes,250g_500g,worm_compost,monthly,0,1-2,sell
+user16@gmail.com,4-5,Large house,Kozhikode,4,18,Loose / refill,1-3,Sometimes,250g_500g,worm_compost,no,0,6+,store
+user17@gmail.com,2-3,Large house,Alappuzha,1,2,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,monthly,0,3-5,trash
+user18@gmail.com,2-3,Small house,Malappuram,3,6,Plastic bottle,4-7,Sometimes,250g_500g,biomethanation,daily,0,6+,sell
+user19@gmail.com,2-3,Large house,Wayanad,1,17,Plastic bottle,4-7,Sometimes,250g_500g,home_compost,no,0,3-5,recycle
+user20@gmail.com,4-5,Small house,Ernakulam,4,3,Plastic bottle,1-3,Always,250g_500g,worm_compost,no,0,6+,trash
+user21@gmail.com,1,Small house,Alappuzha,0,12,Plastic packet,1-3,Always,250g_500g,community,monthly,0,6+,trash
+user22@gmail.com,2-3,Apartment,Idukki,2,12,Plastic packet,,Always,250g_500g,collector,daily,0,none,trash
+user23@gmail.com,2-3,Small house,Wayanad,2,8,Loose / refill,,Never,250g_500g,collector,weekly,1,1-2,recycle
+user24@gmail.com,2-3,Large house,Idukki,2,15,Loose / refill,4-7,Never,250g_500g,biomethanation,weekly,1,3-5,recycle
+user25@gmail.com,4-5,Apartment,Malappuram,4,13,Plastic bottle,4-7,Always,250g_500g,home_compost,no,0,6+,store
+user26@gmail.com,2-3,Apartment,Kozhikode,2,8,Plastic packet,7+,Never,250g_500g,biomethanation,daily,0,none,recycle
+user27@gmail.com,4-5,Apartment,Ernakulam,4,6,Plastic packet,7+,Sometimes,250g_500g,collector,weekly,0,3-5,recycle
+user28@gmail.com,1,Small house,Kollam,1,16,Loose / refill,,Always,250g_500g,biomethanation,no,0,1-2,store
+user29@gmail.com,6+,Small house,Kottayam,3,8,Plastic packet,7+,Always,250g_500g,biomethanation,daily,0,3-5,trash
+user30@gmail.com,6+,Small house,Malappuram,5,2,Loose / refill,1-3,Sometimes,250g_500g,community,daily,0,3-5,sell
+user31@gmail.com,2-3,Large house,Kozhikode,2,2,Plastic packet,,Never,250g_500g,collector,weekly,0,1-2,trash
+user32@gmail.com,2-3,Apartment,Idukki,3,18,Plastic bottle,4-7,Never,250g_500g,biomethanation,daily,0,1-2,recycle
+user33@gmail.com,4-5,Large house,Kasaragod,4,19,Plastic bottle,1-3,Never,250g_500g,home_compost,daily,0,6+,recycle
+user34@gmail.com,4-5,Small house,Kasaragod,3,8,Loose / refill,1-3,Never,250g_500g,community,monthly,0,none,sell
+user35@gmail.com,2-3,Apartment,Thiruvananthapuram,2,11,Plastic packet,4-7,Never,250g_500g,community,no,1,none,sell
+user36@gmail.com,1,Apartment,Thiruvananthapuram,1,6,Loose / refill,,Always,250g_500g,collector,weekly,1,none,sell
+user37@gmail.com,4-5,Large house,Kannur,2,18,Loose / refill,4-7,Never,250g_500g,biomethanation,monthly,0,3-5,sell
+user38@gmail.com,4-5,Small house,Alappuzha,2,20,Plastic bottle,4-7,Sometimes,250g_500g,community,monthly,0,none,sell
+user39@gmail.com,6+,Small house,Palakkad,4,8,Plastic packet,4-7,Always,250g_500g,home_compost,no,0,none,recycle
+user40@gmail.com,2-3,Apartment,Idukki,1,16,Plastic bottle,7+,Always,250g_500g,biomethanation,no,0,1-2,recycle
+user41@gmail.com,2-3,Large house,Kozhikode,2,19,Loose / refill,4-7,Sometimes,250g_500g,collector,daily,0,1-2,recycle
+user42@gmail.com,4-5,Large house,Malappuram,4,10,Plastic bottle,4-7,Always,250g_500g,biomethanation,daily,0,1-2,store
+user43@gmail.com,1,Apartment,Thrissur,1,20,Plastic packet,,Sometimes,250g_500g,collector,daily,0,3-5,sell
+user44@gmail.com,2-3,Small house,Thrissur,3,13,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,1-2,trash
+user45@gmail.com,2-3,Apartment,Thiruvananthapuram,3,15,Plastic packet,,Never,250g_500g,biomethanation,no,0,3-5,trash
+user46@gmail.com,2-3,Apartment,Malappuram,1,3,Loose / refill,,Sometimes,250g_500g,biomethanation,no,0,3-5,recycle
+user47@gmail.com,2-3,Large house,Idukki,3,17,Plastic packet,4-7,Always,250g_500g,worm_compost,weekly,0,3-5,store
+user48@gmail.com,2-3,Apartment,Kozhikode,2,10,Loose / refill,,Never,250g_500g,biomethanation,weekly,0,6+,store
+user49@gmail.com,2-3,Small house,Pathanamthitta,1,3,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,daily,0,1-2,trash
+user50@gmail.com,6+,Large house,Kasaragod,6,16,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,6+,store
+user51@gmail.com,4-5,Apartment,Palakkad,3,2,Loose / refill,1-3,Sometimes,250g_500g,community,daily,1,6+,recycle
+user52@gmail.com,4-5,Apartment,Malappuram,2,18,Plastic packet,7+,Sometimes,250g_500g,community,monthly,0,3-5,sell
+user53@gmail.com,4-5,Apartment,Thiruvananthapuram,2,16,Loose / refill,,Always,250g_500g,collector,monthly,0,3-5,recycle
+user54@gmail.com,1,Apartment,Malappuram,0,18,Plastic packet,7+,Never,250g_500g,home_compost,monthly,0,3-5,trash
+user55@gmail.com,2-3,Large house,Thrissur,3,2,Loose / refill,4-7,Never,250g_500g,collector,daily,0,3-5,trash
+user56@gmail.com,4-5,Apartment,Kollam,4,12,Plastic packet,4-7,Always,250g_500g,biomethanation,no,0,1-2,trash
+user57@gmail.com,6+,Small house,Palakkad,5,6,Plastic packet,7+,Never,250g_500g,mixed,monthly,0,6+,trash
+user58@gmail.com,2-3,Apartment,Thrissur,3,10,Plastic packet,1-3,Always,250g_500g,home_compost,daily,0,3-5,sell
+user59@gmail.com,4-5,Small house,Ernakulam,2,8,Loose / refill,,Sometimes,250g_500g,collector,weekly,0,none,recycle
+user60@gmail.com,6+,Small house,Alappuzha,4,18,Loose / refill,1-3,Sometimes,250g_500g,home_compost,daily,0,6+,store
+user61@gmail.com,4-5,Large house,Kannur,3,6,Loose / refill,7+,Never,250g_500g,community,daily,0,1-2,recycle
+user62@gmail.com,2-3,Small house,Thrissur,2,13,Loose / refill,4-7,Never,250g_500g,community,no,0,3-5,sell
+user63@gmail.com,6+,Small house,Wayanad,4,6,Loose / refill,,Always,250g_500g,collector,daily,1,6+,recycle
+user64@gmail.com,2-3,Apartment,Kottayam,1,15,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,weekly,0,1-2,recycle
+user65@gmail.com,2-3,Large house,Ernakulam,3,11,Plastic bottle,,Never,250g_500g,biomethanation,daily,0,none,trash
+user66@gmail.com,1,Apartment,Thrissur,0,16,Plastic packet,7+,Always,250g_500g,home_compost,monthly,1,6+,recycle
+user67@gmail.com,6+,Apartment,Pathanamthitta,3,20,Plastic packet,1-3,Always,250g_500g,community,no,0,1-2,sell
+user68@gmail.com,2-3,Apartment,Palakkad,1,11,Plastic bottle,4-7,Always,250g_500g,biomethanation,monthly,0,1-2,store
+user69@gmail.com,6+,Apartment,Thiruvananthapuram,5,13,Plastic packet,1-3,Always,250g_500g,community,no,1,1-2,recycle
+user70@gmail.com,6+,Apartment,Kozhikode,5,5,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,none,sell
+user71@gmail.com,2-3,Small house,Palakkad,1,7,Plastic bottle,4-7,Sometimes,250g_500g,collector,monthly,1,1-2,trash
+user72@gmail.com,4-5,Small house,Kannur,3,16,Plastic bottle,4-7,Always,250g_500g,biomethanation,daily,0,1-2,trash
+user73@gmail.com,4-5,Apartment,Palakkad,3,18,Plastic packet,7+,Sometimes,250g_500g,mixed,monthly,0,1-2,store
+user74@gmail.com,4-5,Apartment,Kollam,2,2,Plastic packet,4-7,Never,250g_500g,biomethanation,weekly,0,1-2,sell
+user75@gmail.com,1,Small house,Palakkad,1,20,Plastic packet,1-3,Never,250g_500g,biomethanation,daily,1,6+,store
+user76@gmail.com,2-3,Apartment,Alappuzha,3,12,Loose / refill,1-3,Sometimes,250g_500g,home_compost,no,0,3-5,recycle
+user77@gmail.com,4-5,Small house,Kottayam,2,5,Loose / refill,7+,Sometimes,250g_500g,biomethanation,monthly,0,6+,sell
+user78@gmail.com,6+,Apartment,Wayanad,4,3,Plastic packet,7+,Sometimes,250g_500g,collector,daily,0,3-5,recycle
+user79@gmail.com,2-3,Small house,Alappuzha,1,11,Plastic bottle,7+,Always,250g_500g,biomethanation,monthly,1,1-2,recycle
+user80@gmail.com,4-5,Apartment,Kollam,3,13,Plastic bottle,4-7,Never,250g_500g,mixed,daily,0,1-2,trash
+user81@gmail.com,4-5,Large house,Ernakulam,4,7,Plastic packet,4-7,Never,250g_500g,biomethanation,monthly,0,1-2,trash
+user82@gmail.com,2-3,Apartment,Pathanamthitta,2,14,Plastic bottle,,Always,250g_500g,biomethanation,weekly,0,none,trash
+user83@gmail.com,1,Small house,Idukki,1,10,Plastic bottle,,Sometimes,250g_500g,biomethanation,no,0,3-5,store
+user84@gmail.com,1,Large house,Thiruvananthapuram,0,9,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,no,0,none,sell
+user85@gmail.com,2-3,Apartment,Wayanad,2,16,Plastic bottle,7+,Sometimes,250g_500g,collector,no,0,1-2,sell
+user86@gmail.com,2-3,Apartment,Idukki,2,12,Plastic packet,,Never,250g_500g,biomethanation,no,0,3-5,trash
+user87@gmail.com,2-3,Apartment,Kottayam,1,7,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,weekly,0,1-2,trash
+user88@gmail.com,2-3,Apartment,Kottayam,2,14,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,no,1,1-2,recycle
+user89@gmail.com,2-3,Large house,Kasaragod,1,11,Plastic packet,1-3,Always,250g_500g,collector,no,0,3-5,trash
+user90@gmail.com,1,Apartment,Kannur,1,4,Plastic bottle,7+,Never,250g_500g,biomethanation,no,0,1-2,sell
+user91@gmail.com,2-3,Apartment,Kasaragod,2,19,Plastic bottle,,Sometimes,250g_500g,biomethanation,no,0,6+,recycle
+user92@gmail.com,4-5,Apartment,Thrissur,2,4,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,weekly,0,3-5,trash
+user93@gmail.com,4-5,Small house,Malappuram,2,14,Loose / refill,7+,Always,250g_500g,home_compost,monthly,0,6+,store
+user94@gmail.com,2-3,Small house,Thrissur,3,9,Plastic packet,1-3,Always,250g_500g,home_compost,weekly,0,6+,store
+user95@gmail.com,4-5,Large house,Alappuzha,4,5,Plastic bottle,7+,Always,250g_500g,home_compost,monthly,0,1-2,store
+user96@gmail.com,2-3,Apartment,Alappuzha,2,3,Plastic bottle,7+,Always,250g_500g,biomethanation,monthly,0,3-5,sell
+user97@gmail.com,6+,Small house,Wayanad,6,6,Loose / refill,,Never,250g_500g,biomethanation,weekly,0,6+,trash
+user98@gmail.com,6+,Apartment,Kollam,4,2,Loose / refill,4-7,Always,250g_500g,community,weekly,0,1-2,recycle
+user99@gmail.com,4-5,Small house,Pathanamthitta,4,6,Plastic bottle,7+,Never,250g_500g,collector,no,1,6+,recycle
+user100@gmail.com,6+,Apartment,Wayanad,4,6,Loose / refill,7+,Always,250g_500g,collector,daily,1,1-2,store
+user101@gmail.com,4-5,Small house,Alappuzha,4,11,Loose / refill,7+,Never,250g_500g,biomethanation,daily,0,6+,store
+user102@gmail.com,4-5,Small house,Kottayam,4,5,Plastic packet,7+,Never,250g_500g,biomethanation,daily,2,1-2,store
+user103@gmail.com,6+,Large house,Ernakulam,5,14,Plastic packet,7+,Sometimes,250g_500g,biomethanation,weekly,0,3-5,recycle
+user104@gmail.com,2-3,Apartment,Wayanad,1,4,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,daily,0,none,store
+user105@gmail.com,6+,Large house,Pathanamthitta,5,5,Plastic bottle,1-3,Always,250g_500g,collector,no,0,3-5,sell
+user106@gmail.com,6+,Large house,Kottayam,5,2,Loose / refill,1-3,Never,250g_500g,collector,monthly,0,1-2,recycle
+user107@gmail.com,4-5,Large house,Alappuzha,3,10,Loose / refill,,Sometimes,250g_500g,collector,daily,0,3-5,recycle
+user108@gmail.com,6+,Small house,Kollam,6,2,Plastic bottle,1-3,Sometimes,250g_500g,biomethanation,weekly,1,1-2,trash
+user109@gmail.com,2-3,Apartment,Kollam,3,7,Plastic packet,4-7,Always,250g_500g,collector,monthly,1,3-5,trash
+user110@gmail.com,1,Apartment,Pathanamthitta,1,18,Plastic bottle,1-3,Sometimes,250g_500g,community,weekly,0,3-5,sell
+user111@gmail.com,1,Small house,Kozhikode,1,5,Loose / refill,,Never,250g_500g,biomethanation,weekly,0,1-2,trash
+user112@gmail.com,4-5,Small house,Alappuzha,4,6,Loose / refill,,Never,250g_500g,home_compost,monthly,0,1-2,recycle
+user113@gmail.com,4-5,Large house,Kottayam,3,19,Plastic bottle,7+,Always,250g_500g,community,weekly,0,3-5,sell
+user114@gmail.com,2-3,Large house,Kozhikode,2,12,Loose / refill,1-3,Never,250g_500g,biomethanation,no,0,3-5,trash
+user115@gmail.com,1,Apartment,Palakkad,1,10,Loose / refill,4-7,Sometimes,250g_500g,community,monthly,0,none,sell
+user116@gmail.com,1,Apartment,Kannur,1,13,Loose / refill,1-3,Sometimes,250g_500g,home_compost,no,0,1-2,trash
+user117@gmail.com,4-5,Apartment,Ernakulam,2,12,Plastic packet,7+,Always,250g_500g,biomethanation,daily,1,6+,store
+user118@gmail.com,1,Apartment,Kollam,1,7,Plastic packet,1-3,Never,250g_500g,collector,no,0,3-5,recycle
+user119@gmail.com,4-5,Apartment,Kottayam,3,9,Plastic packet,1-3,Never,250g_500g,collector,no,0,3-5,sell
+user120@gmail.com,4-5,Small house,Kannur,3,12,Plastic bottle,4-7,Never,250g_500g,biomethanation,daily,0,6+,sell
+user121@gmail.com,4-5,Small house,Pathanamthitta,3,10,Plastic packet,,Always,250g_500g,biomethanation,no,1,3-5,recycle
+user122@gmail.com,4-5,Apartment,Kozhikode,3,16,Loose / refill,7+,Sometimes,250g_500g,biomethanation,no,1,1-2,store
+user123@gmail.com,2-3,Apartment,Thrissur,1,2,Loose / refill,4-7,Always,250g_500g,biomethanation,weekly,0,3-5,recycle
+user124@gmail.com,6+,Apartment,Kottayam,3,6,Plastic packet,1-3,Always,250g_500g,community,daily,1,1-2,sell
+user125@gmail.com,4-5,Apartment,Kollam,4,7,Plastic bottle,1-3,Always,250g_500g,collector,no,0,1-2,sell
+user126@gmail.com,4-5,Large house,Idukki,3,19,Plastic bottle,7+,Always,250g_500g,collector,daily,0,1-2,sell
+user127@gmail.com,6+,Small house,Thrissur,6,10,Plastic packet,7+,Never,250g_500g,collector,daily,0,3-5,recycle
+user128@gmail.com,2-3,Apartment,Kollam,2,7,Plastic packet,,Always,250g_500g,collector,no,1,1-2,recycle
+user129@gmail.com,4-5,Small house,Wayanad,2,9,Plastic bottle,,Never,250g_500g,biomethanation,monthly,0,6+,recycle
+user130@gmail.com,2-3,Small house,Alappuzha,3,9,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,monthly,1,3-5,recycle
+user131@gmail.com,2-3,Apartment,Malappuram,2,4,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,3-5,sell
+user132@gmail.com,2-3,Large house,Thrissur,1,13,Plastic packet,4-7,Never,250g_500g,home_compost,daily,0,none,recycle
+user133@gmail.com,4-5,Large house,Kannur,3,10,Plastic bottle,1-3,Always,250g_500g,biomethanation,no,0,6+,recycle
+user134@gmail.com,4-5,Apartment,Kannur,3,3,Loose / refill,4-7,Always,250g_500g,home_compost,monthly,0,3-5,trash
+user135@gmail.com,2-3,Apartment,Thiruvananthapuram,1,6,Plastic packet,1-3,Sometimes,250g_500g,biomethanation,daily,0,1-2,recycle
+user136@gmail.com,2-3,Apartment,Idukki,3,11,Plastic packet,4-7,Sometimes,250g_500g,collector,weekly,0,none,store
+user137@gmail.com,1,Apartment,Pathanamthitta,1,4,Plastic packet,7+,Sometimes,250g_500g,home_compost,monthly,0,1-2,trash
+user138@gmail.com,4-5,Large house,Kannur,2,2,Plastic packet,4-7,Always,250g_500g,home_compost,no,0,none,sell
+user139@gmail.com,2-3,Apartment,Kozhikode,1,15,Plastic bottle,,Sometimes,250g_500g,community,weekly,0,3-5,sell
+user140@gmail.com,2-3,Large house,Pathanamthitta,1,20,Loose / refill,,Sometimes,250g_500g,biomethanation,daily,0,1-2,recycle
+user141@gmail.com,1,Small house,Wayanad,0,8,Plastic bottle,4-7,Sometimes,250g_500g,community,no,1,1-2,recycle
+user142@gmail.com,1,Small house,Wayanad,1,7,Loose / refill,,Sometimes,250g_500g,biomethanation,daily,1,1-2,store
+user143@gmail.com,4-5,Small house,Pathanamthitta,3,7,Plastic bottle,7+,Always,250g_500g,worm_compost,no,1,1-2,store
+user144@gmail.com,6+,Small house,Kozhikode,5,16,Plastic bottle,1-3,Sometimes,250g_500g,collector,no,0,none,recycle
+user145@gmail.com,2-3,Small house,Malappuram,2,5,Plastic packet,,Never,250g_500g,biomethanation,monthly,0,3-5,sell
+user146@gmail.com,2-3,Large house,Kozhikode,1,16,Plastic packet,7+,Never,250g_500g,biomethanation,no,2,3-5,sell
+user147@gmail.com,2-3,Apartment,Thrissur,2,20,Plastic packet,1-3,Sometimes,250g_500g,biomethanation,daily,0,none,store
+user148@gmail.com,2-3,Small house,Pathanamthitta,1,11,Plastic packet,,Sometimes,250g_500g,biomethanation,monthly,0,none,sell
+user149@gmail.com,4-5,Large house,Pathanamthitta,4,3,Plastic packet,,Sometimes,250g_500g,mixed,daily,0,none,recycle
+user150@gmail.com,4-5,Small house,Kottayam,4,14,Loose / refill,4-7,Never,250g_500g,collector,weekly,0,1-2,sell
+user151@gmail.com,2-3,Small house,Kozhikode,2,3,Plastic packet,,Always,250g_500g,community,monthly,0,1-2,trash
+user152@gmail.com,1,Small house,Thiruvananthapuram,1,2,Plastic bottle,,Never,250g_500g,home_compost,monthly,0,none,sell
+user153@gmail.com,4-5,Small house,Thrissur,2,5,Plastic packet,,Always,250g_500g,collector,daily,0,3-5,recycle
+user154@gmail.com,6+,Apartment,Pathanamthitta,4,9,Plastic packet,7+,Sometimes,250g_500g,collector,weekly,0,1-2,store
+user155@gmail.com,4-5,Small house,Kozhikode,2,12,Plastic bottle,4-7,Always,250g_500g,biomethanation,daily,0,3-5,sell
+user156@gmail.com,4-5,Apartment,Wayanad,2,11,Plastic bottle,7+,Never,500g_1kg,biomethanation,no,0,none,store
+user157@gmail.com,2-3,Small house,Pathanamthitta,1,18,Plastic bottle,1-3,Sometimes,250g_500g,collector,no,1,6+,sell
+user158@gmail.com,4-5,Large house,Malappuram,3,6,Loose / refill,1-3,Sometimes,250g_500g,community,monthly,0,1-2,trash
+user159@gmail.com,2-3,Small house,Malappuram,2,8,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,3-5,trash
+user160@gmail.com,6+,Apartment,Palakkad,5,18,Loose / refill,1-3,Sometimes,250g_500g,collector,daily,0,none,store
+user161@gmail.com,2-3,Apartment,Kollam,3,8,Plastic packet,7+,Always,250g_500g,mixed,no,1,none,sell
+user162@gmail.com,4-5,Large house,Kottayam,4,7,Plastic bottle,1-3,Sometimes,500g_1kg,biomethanation,daily,1,6+,sell
+user163@gmail.com,2-3,Apartment,Kottayam,3,3,Plastic bottle,,Never,250g_500g,community,daily,0,1-2,store
+user164@gmail.com,6+,Small house,Thiruvananthapuram,3,17,Plastic packet,,Sometimes,250g_500g,biomethanation,daily,0,1-2,trash
+user165@gmail.com,2-3,Small house,Kozhikode,3,7,Plastic packet,,Never,250g_500g,biomethanation,monthly,0,6+,store
+user166@gmail.com,2-3,Small house,Malappuram,2,13,Plastic bottle,4-7,Sometimes,250g_500g,biomethanation,daily,3,none,sell
+user167@gmail.com,2-3,Apartment,Wayanad,3,2,Plastic packet,4-7,Always,250g_500g,biomethanation,weekly,1,6+,sell
+user168@gmail.com,2-3,Small house,Alappuzha,2,19,Plastic bottle,4-7,Sometimes,250g_500g,biomethanation,daily,1,3-5,recycle
+user169@gmail.com,6+,Small house,Wayanad,5,10,Loose / refill,1-3,Never,250g_500g,collector,daily,1,3-5,recycle
+user170@gmail.com,1,Small house,Thiruvananthapuram,1,19,Plastic packet,4-7,Always,250g_500g,biomethanation,daily,1,6+,sell
+user171@gmail.com,2-3,Small house,Palakkad,2,12,Plastic packet,4-7,Always,250g_500g,biomethanation,no,0,1-2,sell
+user172@gmail.com,1,Apartment,Wayanad,0,19,Loose / refill,,Never,250g_500g,mixed,weekly,0,none,sell
+user173@gmail.com,4-5,Small house,Alappuzha,3,11,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,monthly,2,none,recycle
+user174@gmail.com,6+,Small house,Pathanamthitta,5,15,Plastic packet,4-7,Always,250g_500g,biomethanation,daily,0,1-2,sell
+user175@gmail.com,4-5,Small house,Malappuram,3,9,Plastic packet,7+,Always,250g_500g,collector,no,1,1-2,sell
+user176@gmail.com,4-5,Apartment,Kasaragod,4,3,Loose / refill,1-3,Always,250g_500g,community,monthly,0,1-2,recycle
+user177@gmail.com,2-3,Small house,Kannur,3,2,Plastic packet,,Always,250g_500g,community,weekly,0,1-2,recycle
+user178@gmail.com,6+,Apartment,Palakkad,3,15,Loose / refill,,Sometimes,250g_500g,biomethanation,weekly,1,1-2,recycle
+user179@gmail.com,4-5,Apartment,Kozhikode,3,2,Plastic packet,,Sometimes,250g_500g,collector,monthly,0,6+,trash
+user180@gmail.com,2-3,Apartment,Malappuram,3,13,Plastic bottle,7+,Never,250g_500g,biomethanation,daily,0,6+,sell
+user181@gmail.com,4-5,Apartment,Kottayam,3,7,Plastic bottle,4-7,Sometimes,250g_500g,community,weekly,0,none,sell
+user182@gmail.com,2-3,Apartment,Kollam,3,8,Plastic bottle,,Sometimes,250g_500g,biomethanation,weekly,0,1-2,recycle
+user183@gmail.com,4-5,Apartment,Wayanad,3,4,Loose / refill,1-3,Always,250g_500g,home_compost,monthly,1,1-2,trash
+user184@gmail.com,2-3,Small house,Idukki,1,9,Plastic packet,1-3,Always,250g_500g,biomethanation,no,0,1-2,recycle
+user185@gmail.com,4-5,Small house,Thiruvananthapuram,3,12,Loose / refill,1-3,Never,250g_500g,home_compost,no,0,3-5,trash
+user186@gmail.com,2-3,Large house,Idukki,2,6,Plastic packet,7+,Sometimes,250g_500g,home_compost,no,0,1-2,trash
+user187@gmail.com,4-5,Apartment,Wayanad,4,15,Loose / refill,4-7,Sometimes,250g_500g,community,no,0,1-2,store
+user188@gmail.com,6+,Small house,Kannur,4,9,Loose / refill,,Never,250g_500g,biomethanation,no,0,3-5,sell
+user189@gmail.com,6+,Apartment,Idukki,4,8,Plastic packet,4-7,Sometimes,500g_1kg,collector,daily,0,none,trash
+user190@gmail.com,4-5,Small house,Kasaragod,4,18,Plastic packet,1-3,Never,250g_500g,biomethanation,weekly,0,1-2,sell
+user191@gmail.com,4-5,Apartment,Idukki,3,12,Plastic packet,7+,Never,250g_500g,community,no,1,1-2,trash
+user192@gmail.com,2-3,Apartment,Kannur,2,15,Loose / refill,1-3,Sometimes,250g_500g,biomethanation,weekly,1,3-5,sell
+user193@gmail.com,4-5,Small house,Palakkad,2,19,Plastic packet,4-7,Always,250g_500g,collector,monthly,0,1-2,store
+user194@gmail.com,4-5,Apartment,Pathanamthitta,2,9,Plastic bottle,4-7,Sometimes,250g_500g,mixed,monthly,0,1-2,sell
+user195@gmail.com,4-5,Small house,Thiruvananthapuram,2,12,Plastic packet,7+,Sometimes,250g_500g,collector,daily,0,1-2,trash
+user196@gmail.com,4-5,Apartment,Ernakulam,2,9,Plastic bottle,1-3,Always,250g_500g,worm_compost,monthly,0,6+,trash
+user197@gmail.com,2-3,Large house,Kozhikode,1,5,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,weekly,0,1-2,sell
+user198@gmail.com,4-5,Apartment,Ernakulam,3,3,Plastic bottle,4-7,Never,500g_1kg,mixed,monthly,0,3-5,trash
+user199@gmail.com,2-3,Small house,Malappuram,1,19,Plastic bottle,7+,Never,250g_500g,community,weekly,1,1-2,sell
+user200@gmail.com,1,Small house,Palakkad,1,14,Plastic packet,7+,Always,250g_500g,collector,no,0,none,recycle
+user201@gmail.com,6+,Apartment,Kottayam,5,18,Loose / refill,1-3,Never,250g_500g,collector,weekly,0,3-5,store
+user202@gmail.com,2-3,Small house,Kasaragod,1,19,Plastic bottle,1-3,Never,250g_500g,mixed,daily,0,6+,recycle
+user203@gmail.com,6+,Large house,Pathanamthitta,3,3,Loose / refill,,Always,250g_500g,biomethanation,monthly,0,3-5,sell
+user204@gmail.com,1,Large house,Palakkad,1,14,Plastic bottle,1-3,Always,250g_500g,collector,no,0,1-2,sell
+user205@gmail.com,2-3,Large house,Kozhikode,1,12,Plastic bottle,4-7,Sometimes,250g_500g,collector,daily,0,1-2,trash
+user206@gmail.com,4-5,Small house,Thiruvananthapuram,3,10,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,weekly,1,none,store
+user207@gmail.com,2-3,Large house,Malappuram,2,16,Loose / refill,7+,Never,250g_500g,community,weekly,1,1-2,recycle
+user208@gmail.com,2-3,Small house,Ernakulam,2,7,Loose / refill,7+,Never,250g_500g,community,monthly,0,6+,recycle
+user209@gmail.com,2-3,Large house,Kannur,1,20,Loose / refill,7+,Always,250g_500g,biomethanation,daily,0,1-2,sell
+user210@gmail.com,2-3,Large house,Thiruvananthapuram,3,5,Loose / refill,,Always,250g_500g,biomethanation,daily,0,3-5,sell
+user211@gmail.com,6+,Apartment,Thrissur,5,10,Loose / refill,4-7,Sometimes,250g_500g,collector,no,0,3-5,sell
+user212@gmail.com,6+,Large house,Thrissur,6,14,Plastic bottle,,Never,250g_500g,community,daily,0,3-5,trash
+user213@gmail.com,4-5,Large house,Thiruvananthapuram,2,15,Loose / refill,,Always,250g_500g,biomethanation,weekly,0,1-2,sell
+user214@gmail.com,4-5,Large house,Palakkad,3,10,Plastic packet,7+,Sometimes,250g_500g,biomethanation,daily,0,none,trash
+user215@gmail.com,1,Apartment,Thiruvananthapuram,0,20,Loose / refill,4-7,Never,250g_500g,biomethanation,no,0,1-2,recycle
+user216@gmail.com,2-3,Large house,Pathanamthitta,2,18,Loose / refill,,Sometimes,250g_500g,biomethanation,no,0,none,trash
+user217@gmail.com,2-3,Small house,Malappuram,2,11,Plastic packet,,Always,250g_500g,home_compost,no,0,3-5,recycle
+user218@gmail.com,4-5,Large house,Ernakulam,3,5,Loose / refill,4-7,Never,250g_500g,biomethanation,daily,0,1-2,trash
+user219@gmail.com,2-3,Apartment,Alappuzha,2,19,Plastic bottle,,Always,250g_500g,biomethanation,monthly,0,6+,store
+user220@gmail.com,4-5,Large house,Alappuzha,2,13,Loose / refill,4-7,Never,250g_500g,home_compost,daily,0,1-2,recycle
+user221@gmail.com,2-3,Large house,Ernakulam,1,16,Plastic bottle,4-7,Sometimes,250g_500g,collector,no,1,3-5,trash
+user222@gmail.com,4-5,Small house,Kottayam,3,4,Plastic bottle,,Never,250g_500g,home_compost,no,1,3-5,store
+user223@gmail.com,6+,Apartment,Kottayam,3,17,Plastic bottle,1-3,Sometimes,250g_500g,mixed,monthly,0,1-2,sell
+user224@gmail.com,4-5,Apartment,Kannur,4,6,Plastic packet,7+,Never,250g_500g,biomethanation,monthly,0,1-2,recycle
+user225@gmail.com,6+,Small house,Thrissur,6,5,Plastic packet,4-7,Never,250g_500g,biomethanation,weekly,0,1-2,sell
+user226@gmail.com,2-3,Apartment,Malappuram,1,4,Plastic bottle,,Sometimes,250g_500g,biomethanation,weekly,0,1-2,store
+user227@gmail.com,2-3,Apartment,Kasaragod,1,9,Plastic bottle,1-3,Always,250g_500g,community,no,0,3-5,store
+user228@gmail.com,1,Large house,Kollam,1,19,Loose / refill,4-7,Always,250g_500g,mixed,weekly,0,1-2,store
+user229@gmail.com,2-3,Large house,Kottayam,2,5,Plastic packet,7+,Always,250g_500g,collector,monthly,0,1-2,trash
+user230@gmail.com,2-3,Small house,Wayanad,2,3,Plastic packet,,Always,250g_500g,biomethanation,weekly,0,3-5,trash
+user231@gmail.com,4-5,Apartment,Kollam,3,14,Plastic packet,7+,Never,250g_500g,community,monthly,1,1-2,sell
+user232@gmail.com,2-3,Small house,Kannur,2,15,Plastic packet,7+,Sometimes,250g_500g,biomethanation,weekly,1,1-2,trash
+user233@gmail.com,2-3,Small house,Thrissur,1,3,Plastic bottle,,Sometimes,250g_500g,biomethanation,monthly,0,1-2,recycle
+user234@gmail.com,2-3,Apartment,Malappuram,3,5,Loose / refill,4-7,Always,250g_500g,biomethanation,monthly,1,6+,recycle
+user235@gmail.com,4-5,Apartment,Wayanad,4,9,Plastic bottle,7+,Always,250g_500g,biomethanation,monthly,0,6+,recycle
+user236@gmail.com,4-5,Large house,Wayanad,2,3,Plastic packet,4-7,Always,250g_500g,worm_compost,weekly,1,6+,store
+user237@gmail.com,6+,Large house,Malappuram,6,16,Plastic packet,7+,Always,250g_500g,collector,monthly,0,3-5,sell
+user238@gmail.com,2-3,Apartment,Kasaragod,3,2,Loose / refill,7+,Never,250g_500g,collector,monthly,1,3-5,sell
+user239@gmail.com,4-5,Small house,Kollam,2,8,Loose / refill,1-3,Never,250g_500g,home_compost,weekly,0,6+,recycle
+user240@gmail.com,4-5,Apartment,Thrissur,4,2,Loose / refill,,Never,250g_500g,collector,no,0,3-5,store
+user241@gmail.com,2-3,Apartment,Kasaragod,1,6,Loose / refill,7+,Always,250g_500g,biomethanation,no,0,none,recycle
+user242@gmail.com,4-5,Small house,Palakkad,4,16,Plastic packet,,Always,250g_500g,biomethanation,weekly,0,1-2,recycle
+user243@gmail.com,2-3,Large house,Thiruvananthapuram,2,4,Plastic bottle,7+,Sometimes,250g_500g,collector,monthly,0,none,sell
+user244@gmail.com,2-3,Apartment,Ernakulam,2,16,Loose / refill,,Never,250g_500g,collector,daily,0,3-5,sell
+user245@gmail.com,2-3,Small house,Kasaragod,1,5,Loose / refill,4-7,Always,250g_500g,biomethanation,weekly,0,3-5,trash
+user246@gmail.com,2-3,Apartment,Alappuzha,2,2,Plastic bottle,7+,Sometimes,250g_500g,collector,daily,1,1-2,sell
+user247@gmail.com,4-5,Large house,Kozhikode,3,9,Loose / refill,7+,Sometimes,250g_500g,biomethanation,weekly,0,1-2,trash
+user248@gmail.com,6+,Apartment,Wayanad,6,17,Loose / refill,1-3,Never,250g_500g,biomethanation,monthly,0,1-2,trash
+user249@gmail.com,2-3,Apartment,Wayanad,2,5,Loose / refill,1-3,Never,250g_500g,collector,monthly,2,none,trash
+user250@gmail.com,4-5,Large house,Wayanad,4,5,Loose / refill,,Never,250g_500g,community,no,1,3-5,trash
+user251@gmail.com,6+,Small house,Thrissur,3,7,Plastic bottle,1-3,Always,250g_500g,biomethanation,daily,0,3-5,sell
+user252@gmail.com,4-5,Large house,Alappuzha,3,3,Plastic bottle,7+,Always,250g_500g,biomethanation,daily,1,6+,store
+user253@gmail.com,2-3,Small house,Alappuzha,3,10,Loose / refill,7+,Never,250g_500g,community,daily,2,1-2,trash
+user254@gmail.com,4-5,Apartment,Pathanamthitta,2,7,Plastic packet,7+,Always,250g_500g,home_compost,weekly,0,none,sell
+user255@gmail.com,4-5,Apartment,Pathanamthitta,3,5,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,no,0,3-5,store
+user256@gmail.com,2-3,Apartment,Kottayam,3,20,Plastic bottle,4-7,Never,250g_500g,community,monthly,0,6+,recycle
+user257@gmail.com,4-5,Apartment,Pathanamthitta,3,6,Loose / refill,7+,Sometimes,250g_500g,biomethanation,daily,1,1-2,store
+user258@gmail.com,2-3,Apartment,Ernakulam,2,16,Loose / refill,,Sometimes,250g_500g,biomethanation,daily,0,1-2,sell
+user259@gmail.com,2-3,Small house,Thiruvananthapuram,3,19,Plastic packet,4-7,Always,250g_500g,biomethanation,monthly,0,1-2,store
+user260@gmail.com,2-3,Large house,Kozhikode,2,13,Loose / refill,4-7,Never,250g_500g,collector,daily,1,1-2,sell
+user261@gmail.com,6+,Apartment,Kozhikode,6,2,Plastic bottle,1-3,Never,250g_500g,mixed,daily,1,6+,recycle
+user262@gmail.com,2-3,Apartment,Pathanamthitta,1,17,Plastic packet,,Sometimes,250g_500g,biomethanation,monthly,0,1-2,recycle
+user263@gmail.com,2-3,Small house,Pathanamthitta,3,18,Loose / refill,7+,Always,250g_500g,collector,weekly,1,1-2,store
+user264@gmail.com,6+,Small house,Palakkad,5,7,Plastic bottle,1-3,Never,250g_500g,biomethanation,daily,1,6+,sell
+user265@gmail.com,4-5,Large house,Ernakulam,3,4,Plastic packet,1-3,Sometimes,250g_500g,biomethanation,monthly,0,6+,store
+user266@gmail.com,1,Large house,Idukki,0,19,Plastic packet,4-7,Sometimes,250g_500g,home_compost,monthly,0,3-5,trash
+user267@gmail.com,2-3,Small house,Thrissur,3,3,Loose / refill,4-7,Never,250g_500g,community,weekly,0,3-5,store
+user268@gmail.com,4-5,Large house,Alappuzha,3,3,Plastic packet,4-7,Always,250g_500g,biomethanation,monthly,0,6+,sell
+user269@gmail.com,4-5,Apartment,Thrissur,4,19,Plastic packet,4-7,Always,250g_500g,collector,weekly,0,3-5,recycle
+user270@gmail.com,4-5,Apartment,Kasaragod,2,17,Loose / refill,,Always,250g_500g,mixed,monthly,0,3-5,sell
+user271@gmail.com,1,Small house,Idukki,0,5,Plastic bottle,4-7,Always,250g_500g,biomethanation,no,0,1-2,store
+user272@gmail.com,6+,Apartment,Palakkad,6,16,Plastic packet,,Always,250g_500g,home_compost,daily,0,3-5,trash
+user273@gmail.com,1,Small house,Kottayam,0,16,Plastic packet,7+,Never,250g_500g,worm_compost,daily,1,none,store
+user274@gmail.com,6+,Large house,Idukki,5,7,Loose / refill,,Sometimes,250g_500g,home_compost,weekly,2,3-5,recycle
+user275@gmail.com,1,Large house,Pathanamthitta,0,10,Plastic packet,4-7,Always,250g_500g,biomethanation,monthly,0,3-5,recycle
+user276@gmail.com,2-3,Large house,Thrissur,2,13,Plastic packet,1-3,Always,250g_500g,collector,monthly,0,none,sell
+user277@gmail.com,1,Apartment,Thrissur,1,8,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,monthly,0,1-2,recycle
+user278@gmail.com,4-5,Large house,Ernakulam,2,12,Loose / refill,7+,Never,250g_500g,biomethanation,monthly,0,none,sell
+user279@gmail.com,2-3,Apartment,Thrissur,3,3,Plastic bottle,1-3,Sometimes,250g_500g,collector,monthly,0,3-5,store
+user280@gmail.com,6+,Apartment,Idukki,4,5,Plastic packet,4-7,Never,250g_500g,collector,daily,1,1-2,sell
+user281@gmail.com,4-5,Apartment,Thrissur,4,13,Plastic bottle,7+,Sometimes,250g_500g,community,daily,0,3-5,store
+user282@gmail.com,6+,Apartment,Malappuram,3,5,Loose / refill,7+,Always,250g_500g,biomethanation,weekly,0,1-2,sell
+user283@gmail.com,2-3,Apartment,Thiruvananthapuram,1,7,Plastic bottle,4-7,Always,250g_500g,collector,no,0,1-2,trash
+user284@gmail.com,6+,Apartment,Alappuzha,3,12,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,weekly,0,1-2,store
+user285@gmail.com,2-3,Small house,Pathanamthitta,3,16,Plastic packet,4-7,Always,250g_500g,biomethanation,monthly,0,6+,store
+user286@gmail.com,4-5,Small house,Thrissur,4,12,Plastic bottle,,Sometimes,250g_500g,biomethanation,weekly,0,6+,sell
+user287@gmail.com,4-5,Apartment,Thrissur,2,3,Plastic bottle,1-3,Never,250g_500g,biomethanation,no,0,none,sell
+user288@gmail.com,4-5,Apartment,Palakkad,3,13,Plastic packet,7+,Never,250g_500g,biomethanation,weekly,0,1-2,recycle
+user289@gmail.com,1,Apartment,Palakkad,1,18,Plastic packet,,Always,250g_500g,biomethanation,weekly,0,none,store
+user290@gmail.com,4-5,Large house,Malappuram,4,13,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,no,0,1-2,recycle
+user291@gmail.com,2-3,Small house,Kasaragod,1,14,Plastic packet,,Sometimes,250g_500g,biomethanation,monthly,0,1-2,recycle
+user292@gmail.com,2-3,Apartment,Thiruvananthapuram,2,18,Loose / refill,4-7,Always,250g_500g,biomethanation,no,0,none,sell
+user293@gmail.com,4-5,Small house,Pathanamthitta,4,11,Plastic packet,4-7,Sometimes,500g_1kg,collector,monthly,1,1-2,trash
+user294@gmail.com,2-3,Apartment,Malappuram,3,3,Loose / refill,1-3,Always,250g_500g,biomethanation,daily,0,1-2,trash
+user295@gmail.com,6+,Large house,Thiruvananthapuram,4,19,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,no,0,1-2,sell
+user296@gmail.com,4-5,Small house,Kannur,3,14,Plastic packet,7+,Sometimes,250g_500g,biomethanation,no,0,3-5,store
+user297@gmail.com,2-3,Apartment,Wayanad,3,4,Plastic packet,1-3,Never,250g_500g,biomethanation,weekly,1,1-2,store
+user298@gmail.com,4-5,Small house,Kollam,3,2,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,monthly,0,1-2,trash
+user299@gmail.com,2-3,Apartment,Ernakulam,3,13,Plastic bottle,1-3,Always,250g_500g,biomethanation,monthly,0,3-5,trash
+user300@gmail.com,2-3,Small house,Palakkad,2,5,Plastic bottle,,Sometimes,250g_500g,biomethanation,no,0,1-2,trash
+user301@gmail.com,6+,Small house,Palakkad,5,14,Plastic bottle,4-7,Always,250g_500g,community,no,0,3-5,trash
+user302@gmail.com,4-5,Small house,Alappuzha,4,17,Plastic bottle,7+,Never,250g_500g,collector,daily,1,1-2,trash
+user303@gmail.com,2-3,Small house,Kollam,2,10,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,daily,0,6+,recycle
+user304@gmail.com,2-3,Small house,Alappuzha,1,5,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,daily,0,none,sell
+user305@gmail.com,2-3,Small house,Ernakulam,1,16,Plastic packet,4-7,Never,250g_500g,biomethanation,weekly,0,1-2,trash
+user306@gmail.com,6+,Small house,Kasaragod,5,6,Plastic bottle,,Sometimes,250g_500g,community,weekly,1,1-2,recycle
+user307@gmail.com,1,Large house,Kozhikode,1,20,Plastic packet,1-3,Sometimes,250g_500g,mixed,daily,0,1-2,sell
+user308@gmail.com,4-5,Small house,Malappuram,2,13,Plastic packet,,Sometimes,250g_500g,biomethanation,monthly,0,6+,store
+user309@gmail.com,2-3,Large house,Ernakulam,3,19,Plastic packet,,Always,250g_500g,community,monthly,0,1-2,store
+user310@gmail.com,2-3,Small house,Malappuram,1,7,Plastic bottle,1-3,Sometimes,250g_500g,biomethanation,no,0,1-2,sell
+user311@gmail.com,2-3,Apartment,Thrissur,2,11,Plastic packet,1-3,Never,250g_500g,biomethanation,daily,0,1-2,store
+user312@gmail.com,2-3,Large house,Idukki,2,2,Plastic bottle,7+,Always,250g_500g,collector,no,0,1-2,sell
+user313@gmail.com,2-3,Small house,Malappuram,3,12,Plastic packet,7+,Always,250g_500g,collector,monthly,0,3-5,trash
+user314@gmail.com,2-3,Small house,Kasaragod,1,19,Loose / refill,1-3,Always,250g_500g,biomethanation,weekly,0,3-5,sell
+user315@gmail.com,2-3,Small house,Kasaragod,1,5,Plastic packet,7+,Always,250g_500g,collector,no,0,none,recycle
+user316@gmail.com,2-3,Apartment,Wayanad,1,10,Plastic bottle,1-3,Sometimes,250g_500g,biomethanation,daily,1,none,sell
+user317@gmail.com,6+,Small house,Ernakulam,6,2,Loose / refill,4-7,Always,250g_500g,biomethanation,monthly,0,1-2,recycle
+user318@gmail.com,2-3,Apartment,Pathanamthitta,3,18,Loose / refill,7+,Always,250g_500g,collector,monthly,0,none,recycle
+user319@gmail.com,4-5,Small house,Pathanamthitta,3,4,Loose / refill,4-7,Never,250g_500g,home_compost,daily,0,1-2,trash
+user320@gmail.com,1,Large house,Kozhikode,0,4,Plastic packet,4-7,Never,250g_500g,home_compost,weekly,0,1-2,trash
+user321@gmail.com,2-3,Large house,Kollam,2,16,Plastic packet,4-7,Never,250g_500g,biomethanation,no,0,6+,trash
+user322@gmail.com,1,Small house,Palakkad,0,7,Plastic bottle,7+,Always,250g_500g,community,weekly,0,3-5,store
+user323@gmail.com,4-5,Large house,Idukki,3,9,Loose / refill,7+,Never,250g_500g,community,weekly,1,1-2,sell
+user324@gmail.com,2-3,Small house,Kannur,2,13,Plastic bottle,,Always,250g_500g,biomethanation,monthly,0,none,trash
+user325@gmail.com,4-5,Small house,Kasaragod,2,17,Loose / refill,7+,Always,250g_500g,biomethanation,monthly,0,none,recycle
+user326@gmail.com,2-3,Large house,Kasaragod,1,2,Plastic packet,7+,Never,250g_500g,collector,monthly,0,6+,recycle
+user327@gmail.com,1,Apartment,Idukki,1,2,Loose / refill,1-3,Never,250g_500g,community,daily,0,1-2,sell
+user328@gmail.com,2-3,Apartment,Kozhikode,3,5,Plastic bottle,7+,Never,250g_500g,biomethanation,daily,1,1-2,sell
+user329@gmail.com,2-3,Small house,Malappuram,1,12,Loose / refill,,Sometimes,250g_500g,collector,no,1,1-2,store
+user330@gmail.com,6+,Apartment,Malappuram,6,9,Plastic bottle,4-7,Always,250g_500g,collector,daily,0,none,sell
+user331@gmail.com,4-5,Small house,Kannur,2,17,Plastic packet,1-3,Always,250g_500g,collector,monthly,1,1-2,recycle
+user332@gmail.com,1,Large house,Idukki,1,18,Plastic packet,4-7,Always,250g_500g,community,daily,1,6+,store
+user333@gmail.com,4-5,Large house,Malappuram,4,9,Plastic packet,4-7,Always,250g_500g,community,daily,0,3-5,recycle
+user334@gmail.com,2-3,Large house,Idukki,3,10,Plastic packet,1-3,Never,250g_500g,collector,weekly,0,1-2,store
+user335@gmail.com,2-3,Large house,Kasaragod,3,20,Loose / refill,1-3,Sometimes,250g_500g,biomethanation,monthly,0,none,recycle
+user336@gmail.com,6+,Large house,Kasaragod,4,3,Loose / refill,,Sometimes,250g_500g,biomethanation,no,0,1-2,store
+user337@gmail.com,1,Small house,Thrissur,1,4,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,daily,0,1-2,trash
+user338@gmail.com,2-3,Large house,Kottayam,1,9,Plastic bottle,4-7,Never,250g_500g,biomethanation,monthly,0,1-2,sell
+user339@gmail.com,4-5,Apartment,Malappuram,2,7,Plastic packet,,Sometimes,250g_500g,home_compost,monthly,1,1-2,recycle
+user340@gmail.com,6+,Apartment,Kannur,6,12,Loose / refill,,Never,250g_500g,biomethanation,no,1,6+,trash
+user341@gmail.com,2-3,Small house,Wayanad,1,4,Plastic packet,7+,Sometimes,250g_500g,biomethanation,daily,0,3-5,store
+user342@gmail.com,2-3,Apartment,Kozhikode,3,15,Plastic packet,1-3,Sometimes,250g_500g,biomethanation,no,0,3-5,store
+user343@gmail.com,4-5,Apartment,Palakkad,2,19,Plastic bottle,4-7,Sometimes,250g_500g,collector,no,0,1-2,trash
+user344@gmail.com,4-5,Apartment,Thiruvananthapuram,4,15,Plastic packet,4-7,Never,250g_500g,biomethanation,daily,0,1-2,sell
+user345@gmail.com,2-3,Apartment,Pathanamthitta,1,18,Loose / refill,7+,Always,250g_500g,community,weekly,0,1-2,trash
+user346@gmail.com,4-5,Small house,Thiruvananthapuram,3,20,Loose / refill,7+,Sometimes,250g_500g,community,daily,0,3-5,recycle
+user347@gmail.com,2-3,Small house,Thrissur,3,5,Loose / refill,7+,Sometimes,250g_500g,home_compost,daily,0,none,store
+user348@gmail.com,2-3,Large house,Thrissur,1,20,Loose / refill,4-7,Always,250g_500g,biomethanation,no,0,1-2,recycle
+user349@gmail.com,2-3,Small house,Palakkad,3,10,Loose / refill,1-3,Always,250g_500g,collector,monthly,1,6+,recycle
+user350@gmail.com,2-3,Apartment,Kottayam,2,12,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,monthly,0,1-2,trash
+user351@gmail.com,6+,Small house,Alappuzha,4,6,Loose / refill,7+,Always,250g_500g,biomethanation,monthly,0,1-2,recycle
+user352@gmail.com,1,Apartment,Kollam,1,20,Loose / refill,1-3,Always,250g_500g,community,monthly,0,6+,sell
+user353@gmail.com,2-3,Apartment,Wayanad,3,6,Loose / refill,,Never,250g_500g,community,monthly,1,1-2,recycle
+user354@gmail.com,2-3,Small house,Palakkad,1,16,Loose / refill,1-3,Never,250g_500g,collector,daily,0,3-5,store
+user355@gmail.com,1,Large house,Wayanad,0,5,Plastic packet,,Always,250g_500g,biomethanation,no,0,1-2,recycle
+user356@gmail.com,2-3,Apartment,Wayanad,2,19,Plastic bottle,7+,Always,250g_500g,biomethanation,weekly,0,6+,sell
+user357@gmail.com,4-5,Apartment,Thiruvananthapuram,2,19,Plastic bottle,4-7,Sometimes,250g_500g,collector,monthly,0,1-2,sell
+user358@gmail.com,4-5,Large house,Alappuzha,4,18,Loose / refill,4-7,Always,250g_500g,biomethanation,monthly,1,3-5,trash
+user359@gmail.com,4-5,Apartment,Wayanad,4,2,Plastic bottle,4-7,Always,250g_500g,collector,weekly,0,none,trash
+user360@gmail.com,2-3,Large house,Ernakulam,3,10,Loose / refill,7+,Never,250g_500g,community,monthly,0,none,trash
+user361@gmail.com,2-3,Apartment,Alappuzha,3,20,Plastic packet,,Never,250g_500g,collector,daily,1,3-5,trash
+user362@gmail.com,2-3,Apartment,Wayanad,3,19,Plastic packet,4-7,Never,250g_500g,community,daily,0,1-2,recycle
+user363@gmail.com,1,Large house,Pathanamthitta,0,3,Plastic bottle,7+,Sometimes,250g_500g,home_compost,no,0,3-5,trash
+user364@gmail.com,6+,Apartment,Idukki,4,8,Plastic packet,1-3,Sometimes,250g_500g,biomethanation,monthly,0,none,sell
+user365@gmail.com,4-5,Apartment,Idukki,2,4,Loose / refill,4-7,Sometimes,250g_500g,community,monthly,0,3-5,recycle
+user366@gmail.com,4-5,Small house,Kasaragod,3,8,Plastic bottle,,Never,250g_500g,biomethanation,monthly,0,6+,store
+user367@gmail.com,2-3,Small house,Ernakulam,3,15,Plastic bottle,,Never,250g_500g,collector,no,0,3-5,recycle
+user368@gmail.com,6+,Large house,Thiruvananthapuram,3,19,Plastic packet,,Sometimes,250g_500g,home_compost,daily,0,3-5,recycle
+user369@gmail.com,4-5,Large house,Pathanamthitta,4,12,Loose / refill,1-3,Sometimes,250g_500g,biomethanation,monthly,0,6+,store
+user370@gmail.com,4-5,Small house,Kollam,2,8,Plastic bottle,1-3,Sometimes,250g_500g,home_compost,monthly,0,3-5,recycle
+user371@gmail.com,2-3,Large house,Kasaragod,3,14,Plastic bottle,1-3,Never,250g_500g,biomethanation,monthly,0,6+,trash
+user372@gmail.com,2-3,Apartment,Idukki,2,4,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,no,0,3-5,trash
+user373@gmail.com,4-5,Apartment,Palakkad,3,4,Plastic bottle,7+,Always,250g_500g,biomethanation,monthly,0,6+,trash
+user374@gmail.com,4-5,Large house,Ernakulam,3,17,Plastic bottle,1-3,Never,250g_500g,collector,monthly,0,6+,sell
+user375@gmail.com,6+,Large house,Alappuzha,4,9,Loose / refill,1-3,Sometimes,250g_500g,biomethanation,daily,0,1-2,sell
+user376@gmail.com,2-3,Small house,Alappuzha,1,6,Plastic packet,,Sometimes,250g_500g,community,weekly,2,3-5,recycle
+user377@gmail.com,4-5,Large house,Palakkad,4,11,Plastic bottle,7+,Always,250g_500g,biomethanation,no,0,1-2,sell
+user378@gmail.com,2-3,Large house,Kozhikode,1,20,Plastic bottle,1-3,Never,250g_500g,biomethanation,daily,1,3-5,trash
+user379@gmail.com,2-3,Small house,Ernakulam,3,4,Plastic bottle,,Always,250g_500g,worm_compost,monthly,2,1-2,sell
+user380@gmail.com,1,Apartment,Wayanad,0,3,Loose / refill,7+,Always,250g_500g,home_compost,no,0,1-2,store
+user381@gmail.com,2-3,Small house,Malappuram,1,3,Plastic packet,1-3,Never,250g_500g,biomethanation,monthly,1,6+,sell
+user382@gmail.com,6+,Small house,Palakkad,6,2,Plastic packet,1-3,Never,250g_500g,collector,daily,0,3-5,recycle
+user383@gmail.com,2-3,Large house,Malappuram,1,12,Plastic bottle,,Sometimes,250g_500g,home_compost,weekly,0,1-2,store
+user384@gmail.com,4-5,Apartment,Idukki,4,12,Loose / refill,,Never,250g_500g,biomethanation,daily,0,6+,recycle
+user385@gmail.com,4-5,Small house,Idukki,4,6,Plastic bottle,7+,Sometimes,250g_500g,collector,monthly,0,3-5,trash
+user386@gmail.com,4-5,Large house,Thiruvananthapuram,2,13,Loose / refill,7+,Sometimes,250g_500g,home_compost,monthly,0,3-5,store
+user387@gmail.com,1,Apartment,Kottayam,1,8,Loose / refill,1-3,Never,500g_1kg,biomethanation,monthly,0,3-5,trash
+user388@gmail.com,2-3,Small house,Thrissur,1,11,Plastic bottle,7+,Always,250g_500g,biomethanation,no,1,1-2,recycle
+user389@gmail.com,4-5,Apartment,Thrissur,2,13,Plastic bottle,,Never,250g_500g,community,weekly,0,1-2,store
+user390@gmail.com,1,Large house,Kasaragod,1,9,Loose / refill,4-7,Always,250g_500g,collector,daily,0,1-2,recycle
+user391@gmail.com,4-5,Small house,Thiruvananthapuram,2,12,Loose / refill,7+,Always,250g_500g,collector,daily,0,none,trash
+user392@gmail.com,6+,Large house,Kozhikode,6,18,Plastic bottle,1-3,Sometimes,250g_500g,collector,daily,1,1-2,recycle
+user393@gmail.com,4-5,Small house,Kollam,4,19,Plastic packet,7+,Sometimes,250g_500g,community,no,0,1-2,recycle
+user394@gmail.com,2-3,Apartment,Kollam,2,6,Plastic packet,1-3,Never,250g_500g,collector,monthly,0,3-5,store
+user395@gmail.com,4-5,Small house,Kottayam,3,2,Plastic packet,4-7,Sometimes,250g_500g,collector,no,1,1-2,recycle
+user396@gmail.com,6+,Large house,Kozhikode,4,5,Loose / refill,4-7,Sometimes,250g_500g,mixed,no,0,1-2,sell
+user397@gmail.com,2-3,Apartment,Wayanad,3,4,Plastic packet,4-7,Never,250g_500g,biomethanation,no,0,6+,trash
+user398@gmail.com,4-5,Large house,Kozhikode,3,12,Plastic packet,1-3,Always,250g_500g,mixed,monthly,0,1-2,trash
+user399@gmail.com,2-3,Apartment,Kozhikode,3,11,Loose / refill,1-3,Always,250g_500g,collector,weekly,0,3-5,recycle
+user400@gmail.com,4-5,Apartment,Idukki,4,6,Loose / refill,1-3,Never,250g_500g,biomethanation,monthly,0,1-2,sell
+user401@gmail.com,4-5,Apartment,Alappuzha,4,10,Plastic bottle,4-7,Always,250g_500g,mixed,weekly,0,1-2,recycle
+user402@gmail.com,4-5,Small house,Pathanamthitta,4,15,Loose / refill,7+,Never,250g_500g,home_compost,monthly,0,1-2,recycle
+user403@gmail.com,4-5,Small house,Kozhikode,2,10,Loose / refill,,Always,250g_500g,collector,monthly,0,1-2,store
+user404@gmail.com,1,Large house,Idukki,1,4,Loose / refill,,Always,250g_500g,community,monthly,0,3-5,trash
+user405@gmail.com,2-3,Small house,Kottayam,3,8,Plastic packet,4-7,Never,250g_500g,biomethanation,weekly,0,1-2,recycle
+user406@gmail.com,2-3,Large house,Idukki,1,6,Loose / refill,,Never,250g_500g,biomethanation,daily,0,none,store
+user407@gmail.com,4-5,Small house,Idukki,2,7,Plastic bottle,4-7,Sometimes,250g_500g,biomethanation,weekly,0,3-5,recycle
+user408@gmail.com,2-3,Small house,Kozhikode,2,5,Loose / refill,,Always,250g_500g,community,monthly,0,1-2,recycle
+user409@gmail.com,1,Small house,Thiruvananthapuram,0,7,Loose / refill,,Always,250g_500g,biomethanation,daily,0,6+,trash
+user410@gmail.com,6+,Apartment,Palakkad,5,12,Plastic bottle,7+,Never,250g_500g,home_compost,daily,0,3-5,sell
+user411@gmail.com,6+,Large house,Malappuram,3,7,Plastic packet,4-7,Sometimes,250g_500g,collector,monthly,0,1-2,store
+user412@gmail.com,2-3,Small house,Kasaragod,1,12,Plastic packet,1-3,Sometimes,250g_500g,community,weekly,0,1-2,trash
+user413@gmail.com,1,Apartment,Kannur,0,8,Loose / refill,7+,Sometimes,250g_500g,community,monthly,0,3-5,store
+user414@gmail.com,4-5,Small house,Ernakulam,2,20,Loose / refill,1-3,Never,250g_500g,community,daily,0,1-2,store
+user415@gmail.com,4-5,Small house,Kottayam,2,12,Plastic bottle,4-7,Never,500g_1kg,collector,no,0,1-2,sell
+user416@gmail.com,6+,Small house,Thiruvananthapuram,5,20,Plastic bottle,4-7,Always,250g_500g,collector,daily,0,3-5,recycle
+user417@gmail.com,6+,Large house,Kottayam,5,18,Loose / refill,1-3,Never,250g_500g,biomethanation,monthly,0,none,trash
+user418@gmail.com,4-5,Large house,Pathanamthitta,3,8,Loose / refill,1-3,Never,250g_500g,collector,daily,0,3-5,store
+user419@gmail.com,2-3,Large house,Kozhikode,2,2,Plastic bottle,4-7,Never,250g_500g,biomethanation,daily,0,1-2,recycle
+user420@gmail.com,4-5,Large house,Palakkad,3,13,Plastic bottle,1-3,Sometimes,250g_500g,community,daily,0,1-2,trash
+user421@gmail.com,2-3,Large house,Wayanad,1,19,Plastic bottle,4-7,Never,250g_500g,home_compost,monthly,0,1-2,recycle
+user422@gmail.com,1,Small house,Wayanad,0,16,Plastic bottle,,Never,250g_500g,biomethanation,weekly,0,1-2,trash
+user423@gmail.com,4-5,Large house,Alappuzha,4,6,Loose / refill,,Sometimes,250g_500g,biomethanation,monthly,0,6+,store
+user424@gmail.com,2-3,Small house,Kollam,2,16,Loose / refill,1-3,Always,250g_500g,biomethanation,monthly,1,none,recycle
+user425@gmail.com,4-5,Apartment,Ernakulam,4,19,Loose / refill,,Never,250g_500g,biomethanation,weekly,0,1-2,sell
+user426@gmail.com,2-3,Large house,Malappuram,1,9,Plastic bottle,1-3,Sometimes,250g_500g,collector,weekly,0,1-2,trash
+user427@gmail.com,4-5,Small house,Wayanad,3,10,Plastic bottle,1-3,Always,250g_500g,biomethanation,monthly,0,6+,store
+user428@gmail.com,4-5,Large house,Kozhikode,2,19,Plastic packet,7+,Always,250g_500g,collector,no,1,1-2,sell
+user429@gmail.com,2-3,Apartment,Kollam,2,11,Loose / refill,1-3,Never,250g_500g,biomethanation,weekly,0,1-2,recycle
+user430@gmail.com,2-3,Small house,Thiruvananthapuram,2,15,Plastic bottle,4-7,Never,250g_500g,collector,daily,0,3-5,sell
+user431@gmail.com,2-3,Large house,Pathanamthitta,2,10,Plastic bottle,1-3,Always,250g_500g,biomethanation,monthly,1,1-2,trash
+user432@gmail.com,2-3,Small house,Ernakulam,3,14,Plastic packet,1-3,Never,250g_500g,biomethanation,monthly,1,1-2,sell
+user433@gmail.com,2-3,Small house,Kottayam,1,14,Plastic packet,4-7,Always,250g_500g,home_compost,no,1,3-5,sell
+user434@gmail.com,4-5,Small house,Pathanamthitta,2,16,Plastic packet,,Never,250g_500g,biomethanation,daily,0,1-2,recycle
+user435@gmail.com,1,Apartment,Ernakulam,0,8,Plastic packet,7+,Sometimes,250g_500g,collector,daily,0,6+,sell
+user436@gmail.com,6+,Apartment,Kannur,4,16,Plastic bottle,4-7,Always,250g_500g,biomethanation,weekly,0,1-2,recycle
+user437@gmail.com,4-5,Small house,Thrissur,4,8,Loose / refill,,Sometimes,250g_500g,biomethanation,monthly,1,3-5,store
+user438@gmail.com,1,Small house,Kottayam,0,20,Plastic packet,7+,Sometimes,250g_500g,community,monthly,0,3-5,sell
+user439@gmail.com,2-3,Apartment,Thiruvananthapuram,1,15,Plastic packet,,Sometimes,250g_500g,collector,daily,0,3-5,store
+user440@gmail.com,2-3,Large house,Palakkad,3,2,Plastic bottle,,Sometimes,250g_500g,biomethanation,weekly,0,3-5,trash
+user441@gmail.com,4-5,Small house,Kasaragod,3,20,Plastic packet,1-3,Sometimes,250g_500g,community,monthly,0,1-2,sell
+user442@gmail.com,4-5,Large house,Pathanamthitta,2,13,Plastic packet,1-3,Never,250g_500g,biomethanation,no,0,none,recycle
+user443@gmail.com,2-3,Large house,Alappuzha,3,11,Plastic packet,,Always,250g_500g,collector,monthly,0,1-2,store
+user444@gmail.com,2-3,Apartment,Thiruvananthapuram,2,4,Plastic bottle,1-3,Sometimes,250g_500g,biomethanation,monthly,0,1-2,store
+user445@gmail.com,4-5,Apartment,Palakkad,3,13,Loose / refill,,Sometimes,250g_500g,collector,weekly,0,1-2,store
+user446@gmail.com,2-3,Small house,Idukki,2,11,Plastic bottle,,Never,250g_500g,biomethanation,daily,1,6+,recycle
+user447@gmail.com,6+,Apartment,Kozhikode,6,5,Loose / refill,,Sometimes,500g_1kg,community,daily,0,3-5,trash
+user448@gmail.com,2-3,Small house,Ernakulam,2,17,Plastic bottle,,Never,250g_500g,mixed,daily,0,6+,sell
+user449@gmail.com,4-5,Apartment,Pathanamthitta,2,9,Plastic packet,1-3,Never,250g_500g,biomethanation,weekly,0,3-5,recycle
+user450@gmail.com,2-3,Large house,Kottayam,3,20,Loose / refill,4-7,Sometimes,250g_500g,collector,daily,0,1-2,sell
+user451@gmail.com,2-3,Small house,Kannur,2,4,Loose / refill,,Sometimes,250g_500g,mixed,weekly,1,3-5,store
+user452@gmail.com,2-3,Small house,Kozhikode,3,11,Loose / refill,1-3,Sometimes,250g_500g,biomethanation,monthly,0,1-2,trash
+user453@gmail.com,6+,Apartment,Kottayam,5,9,Loose / refill,1-3,Sometimes,250g_500g,collector,weekly,0,6+,store
+user454@gmail.com,1,Large house,Thiruvananthapuram,0,19,Plastic bottle,,Sometimes,250g_500g,biomethanation,monthly,0,1-2,sell
+user455@gmail.com,2-3,Apartment,Wayanad,1,17,Plastic bottle,7+,Never,250g_500g,collector,daily,0,6+,trash
+user456@gmail.com,2-3,Apartment,Kasaragod,2,11,Loose / refill,7+,Never,250g_500g,home_compost,weekly,0,3-5,sell
+user457@gmail.com,4-5,Small house,Wayanad,2,2,Plastic packet,7+,Sometimes,250g_500g,biomethanation,weekly,0,3-5,store
+user458@gmail.com,4-5,Small house,Thiruvananthapuram,2,12,Plastic packet,1-3,Never,250g_500g,community,weekly,0,3-5,store
+user459@gmail.com,4-5,Small house,Kannur,3,6,Loose / refill,7+,Sometimes,250g_500g,biomethanation,daily,0,3-5,store
+user460@gmail.com,2-3,Apartment,Idukki,2,5,Plastic packet,1-3,Never,250g_500g,biomethanation,daily,2,1-2,recycle
+user461@gmail.com,2-3,Large house,Ernakulam,1,18,Plastic bottle,7+,Never,250g_500g,collector,daily,0,3-5,recycle
+user462@gmail.com,6+,Apartment,Pathanamthitta,3,6,Plastic packet,1-3,Sometimes,250g_500g,home_compost,no,0,1-2,recycle
+user463@gmail.com,1,Small house,Malappuram,1,20,Plastic bottle,4-7,Sometimes,250g_500g,community,weekly,1,1-2,store
+user464@gmail.com,6+,Small house,Pathanamthitta,6,2,Loose / refill,4-7,Sometimes,250g_500g,collector,no,0,3-5,trash
+user465@gmail.com,2-3,Large house,Kottayam,3,2,Plastic bottle,1-3,Never,250g_500g,collector,weekly,0,3-5,store
+user466@gmail.com,2-3,Small house,Ernakulam,1,12,Loose / refill,,Never,250g_500g,biomethanation,weekly,0,1-2,recycle
+user467@gmail.com,2-3,Small house,Kannur,3,16,Loose / refill,1-3,Sometimes,250g_500g,community,monthly,0,1-2,store
+user468@gmail.com,2-3,Small house,Thrissur,2,18,Plastic bottle,7+,Always,250g_500g,biomethanation,weekly,0,6+,sell
+user469@gmail.com,2-3,Large house,Ernakulam,3,2,Loose / refill,,Sometimes,250g_500g,collector,daily,0,6+,trash
+user470@gmail.com,4-5,Apartment,Ernakulam,4,5,Plastic bottle,7+,Always,250g_500g,biomethanation,weekly,0,1-2,trash
+user471@gmail.com,2-3,Small house,Wayanad,1,20,Loose / refill,4-7,Sometimes,250g_500g,biomethanation,daily,0,1-2,trash
+user472@gmail.com,4-5,Apartment,Idukki,4,2,Plastic bottle,4-7,Always,250g_500g,community,no,0,1-2,recycle
+user473@gmail.com,2-3,Apartment,Kottayam,2,7,Plastic packet,4-7,Sometimes,250g_500g,biomethanation,no,0,3-5,sell
+user474@gmail.com,4-5,Apartment,Pathanamthitta,3,2,Plastic bottle,4-7,Always,250g_500g,community,daily,0,3-5,recycle
+user475@gmail.com,4-5,Large house,Pathanamthitta,2,2,Loose / refill,,Always,250g_500g,community,monthly,0,6+,trash
+user476@gmail.com,2-3,Apartment,Pathanamthitta,2,20,Plastic packet,7+,Never,250g_500g,collector,daily,0,1-2,sell
+user477@gmail.com,2-3,Apartment,Kozhikode,1,14,Plastic packet,7+,Sometimes,250g_500g,biomethanation,monthly,0,3-5,trash
+user478@gmail.com,2-3,Small house,Palakkad,2,17,Loose / refill,,Never,250g_500g,community,daily,1,6+,sell
+user479@gmail.com,2-3,Apartment,Kasaragod,3,5,Loose / refill,7+,Always,250g_500g,biomethanation,monthly,0,6+,store
+user480@gmail.com,4-5,Small house,Kozhikode,2,7,Plastic bottle,,Always,250g_500g,biomethanation,monthly,0,3-5,trash
+user481@gmail.com,2-3,Small house,Alappuzha,2,9,Plastic packet,4-7,Sometimes,250g_500g,community,no,0,6+,sell
+user482@gmail.com,6+,Large house,Kannur,5,19,Plastic bottle,,Always,250g_500g,community,daily,1,none,recycle
+user483@gmail.com,6+,Small house,Kozhikode,3,9,Plastic bottle,,Never,250g_500g,worm_compost,daily,0,1-2,recycle
+user484@gmail.com,1,Large house,Thiruvananthapuram,0,18,Loose / refill,,Never,250g_500g,home_compost,no,0,6+,sell
+user485@gmail.com,1,Apartment,Wayanad,1,4,Loose / refill,4-7,Never,250g_500g,home_compost,weekly,1,3-5,trash
+user486@gmail.com,2-3,Small house,Alappuzha,3,15,Plastic bottle,1-3,Sometimes,250g_500g,biomethanation,monthly,0,3-5,sell
+user487@gmail.com,2-3,Small house,Kasaragod,3,11,Loose / refill,,Always,250g_500g,collector,no,0,3-5,store
+user488@gmail.com,2-3,Small house,Wayanad,1,2,Plastic packet,,Always,250g_500g,biomethanation,no,0,1-2,trash
+user489@gmail.com,4-5,Apartment,Kollam,4,15,Loose / refill,1-3,Never,250g_500g,collector,daily,0,1-2,sell
+user490@gmail.com,2-3,Apartment,Kollam,3,11,Plastic packet,4-7,Always,250g_500g,biomethanation,monthly,0,1-2,trash
+user491@gmail.com,1,Large house,Palakkad,0,2,Loose / refill,,Always,250g_500g,biomethanation,monthly,1,1-2,recycle
+user492@gmail.com,4-5,Large house,Idukki,2,2,Loose / refill,4-7,Always,250g_500g,community,monthly,0,6+,sell
+user493@gmail.com,2-3,Apartment,Kozhikode,1,15,Loose / refill,4-7,Always,250g_500g,biomethanation,no,0,3-5,recycle
+user494@gmail.com,4-5,Small house,Ernakulam,3,5,Plastic bottle,7+,Never,250g_500g,biomethanation,weekly,0,3-5,sell
+user495@gmail.com,2-3,Large house,Idukki,3,14,Plastic bottle,7+,Never,250g_500g,biomethanation,weekly,0,6+,recycle
+user496@gmail.com,4-5,Large house,Wayanad,3,14,Plastic bottle,7+,Sometimes,250g_500g,biomethanation,no,1,1-2,trash
+user497@gmail.com,2-3,Apartment,Palakkad,3,4,Loose / refill,4-7,Always,250g_500g,collector,monthly,0,1-2,trash
+user498@gmail.com,1,Small house,Kozhikode,0,19,Plastic packet,1-3,Never,250g_500g,biomethanation,daily,0,6+,trash
+user499@gmail.com,2-3,Apartment,Thiruvananthapuram,2,9,Plastic packet,4-7,Sometimes,250g_500g,community,monthly,1,1-2,recycle
+user500@gmail.com,2-3,Small house,Thiruvananthapuram,2,18,Plastic bottle,1-3,Sometimes,250g_500g,home_compost,monthly,0,none,trash

@@ -2,73 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Waste Management Login</title>
+<title>Biodegradable Waste Assessment</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
     margin:0;
     font-family:'Segoe UI', Arial, sans-serif;
     background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url("https://images.unsplash.com/photo-1604186838309-c671b2f7e7c0?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+    url("https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
     background-size:cover;
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-}
-
-.login-container{
-    background:white;
-    width:380px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    text-align:center;
-    
-}
-
-h2{
-    color:#2e7d32;
-    margin-bottom:5px;
-}
-
-.subtitle{
-    font-size:14px;
-    color:#555;
-    margin-bottom:20px;
-}
-
-input{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:14px;
-}
-
-input:focus{
-    border-color:#2e7d32;
-    outline:none;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    margin-top:20px;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#1b5e20;
 }
 
 .language-btn{
@@ -81,14 +28,148 @@ button:hover{
     border-radius:20px;
     cursor:pointer;
     font-weight:600;
+    z-index:100;
+}
+
+.container{
+    background:white;
+    width:450px;
+    max-width:90%;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    margin:20px auto;
+}
+
+h2{
+    color:#2e7d32;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+.subtitle{
+    font-size:14px;
+    color:#555;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.section{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #e0e0e0;
+}
+
+.section h3{
+    color:#1b5e20;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+label{
+    font-weight:600;
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    color:#333;
+}
+
+select, input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+    background-color:white;
+    box-sizing:border-box;
+}
+
+select:focus, input:focus{
+    border-color:#2e7d32;
+    outline:none;
+    box-shadow:0 0 0 2px rgba(46,125,50,0.1);
+}
+
+button.submit{
+    width:100%;
+    padding:14px;
+    margin-top:25px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button.submit:hover{
+    background:#1b5e20;
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.note{
+    background:#e8f5e9;
+    padding:12px;
+    border-radius:8px;
+    margin-top:20px;
+    font-size:13px;
+    color:#1b5e20;
+    border-left:4px solid #2e7d32;
+}
+
+.small-note{
+    font-size:12px;
+    color:#666;
+    margin-top:5px;
 }
 
 .footer{
-    margin-top:15px;
+    margin-top:25px;
     font-size:12px;
     color:#777;
+    text-align:center;
 }
 
+.back-link{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:600;
+    font-size:14px;
+}
+
+.back-link:hover{
+    text-decoration:underline;
+}
+
+.option-group{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+    flex-wrap:wrap;
+}
+
+.option-item{
+    flex:1;
+    min-width:100px;
+}
+
+.radio-label{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    font-weight:normal;
+    margin-top:0;
+}
+
+.radio-label input[type="radio"]{
+    width:auto;
+    margin-right:5px;
+}
 </style>
 </head>
 
@@ -96,65 +177,145 @@ button:hover{
 
 <button class="language-btn" onclick="toggleLanguage()">മലയാളം</button>
 
-<div class="login-container">
+<div class="container">
 
-<h2 id="title">Smart Waste Management Login</h2>
-<div class="subtitle" id="subtitle">Kerala Carbon Footprint Monitoring System</div>
+<h2 id="title">Biodegradable Waste Assessment</h2>
+<div class="subtitle" id="subtitle">Kitchen & Garden Waste Tracking</div>
 
-<form action="/login" method="POST">
+<form action="{{ url_for('biodegradable_submit') }}" method="POST">
 
-<input type="email" name="email" placeholder="Registered Email Address" required>
+<div class="section">
+<h3 id="foodSection">🥕 Food & Kitchen Waste</h3>
 
-<input type="password" name="password" placeholder="Password" required>
+<label id="foodWasteLabel">How much food waste does your household generate per day?</label>
+<select name="food_waste" id="foodWaste" required>
+<option value="">Select amount</option>
+<option value="less_250g">Less than 250g</option>
+<option value="250g_500g">250g - 500g</option>
+<option value="500g_1kg">500g - 1kg</option>
+<option value="more_1kg">More than 1kg</option>
+</select>
+<div class="small-note" id="foodNote">Includes vegetable peels, cooked food leftovers</div>
 
-<input type="text" name="aadhaar" pattern="[0-9]{12}" maxlength="12"
-placeholder="Aadhaar Number (12 digits)" required>
-
-<button type="submit" id="loginBtn">Login</button>
-
-<div style="margin-top:15px;">
-    <a href="{{ url_for('register.html') }}" 
-       style="text-decoration:none;color:#2e7d32;font-weight:600;">
-        Create New Account
-    </a>
+<label id="compostLabel">Do you compost or process biodegradable waste?</label>
+<select name="compost" id="compost" required>
+<option value="">Select method</option>
+<option value="home_compost">Home composting (pit/ bin)</option>
+<option value="biomethanation">Biomethanation / Biogas</option>
+<option value="worm_compost">Vermicomposting</option>
+<option value="community">Community composting facility</option>
+<option value="collector">Give to waste collector</option>
+<option value="mixed">Mixed with other waste</option>
+</select>
 </div>
+
+<div class="section">
+<h3 id="gardenSection">🌿 Garden & Yard Waste</h3>
+
+<label id="gardenLabel">Do you have garden waste? (leaves, grass, twigs)</label>
+<select name="garden_waste" id="gardenWaste" required>
+<option value="">Select option</option>
+<option value="daily">Yes, daily/regularly</option>
+<option value="weekly">Yes, weekly</option>
+<option value="monthly">Sometimes (monthly)</option>
+<option value="no">No garden waste</option>
+</select>
+
+<label id="disposalLabel">How do you dispose of garden waste?</label>
+<select name="garden_disposal" id="gardenDisposal">
+<option value="">Select method (optional)</option>
+<option value="compost">Add to compost</option>
+<option value="mulch">Use as mulch</option>
+<option value="burn">Burn (not recommended)</option>
+<option value="collector">Give to collector</option>
+<option value="dump">Open dumping</option>
+</select>
+</div>
+
+<div class="section">
+<h3 id="otherSection">🔄 Additional Practices</h3>
+
+<label id="cowLabel">Do you have cows or livestock that use kitchen waste?</label>
+<select name="cow_feed" id="cowFeed">
+<option value="">Select option</option>
+<option value="yes">Yes, feed to animals</option>
+<option value="no">No</option>
+</select>
+
+<label id="leafLabel">Do you practice leaf mulching or composting?</label>
+<select name="leaf_compost" id="leafCompost">
+<option value="">Select option</option>
+<option value="always">Always</option>
+<option value="sometimes">Sometimes</option>
+<option value="never">Never</option>
+</select>
+</div>
+
+<div class="note" id="note">
+🌱 Proper biodegradable waste management reduces methane emissions and creates valuable compost. Every kg of food waste composted saves approximately 2 kg of CO2 equivalent!
+</div>
+
+<button type="submit" class="submit" id="submitBtn">Submit Biodegradable Data</button>
+
+<div class="footer">
+    <a href="{{ url_for('plastic') }}" class="back-link" id="backLink">← Back to Plastic Waste Assessment</a>
+</div>
+
 </form>
-
-<div class="footer" id="footerText">
-Secure login. Your Aadhaar is encrypted and used only for verification.
-</div>
 
 </div>
 
 <script>
-
 let malayalam = false;
 
 function toggleLanguage(){
-
-malayalam = !malayalam;
-
-if(malayalam){
-
-document.querySelector(".language-btn").innerText="English";
-
-document.getElementById("title").innerText="സ്മാർട്ട് മാലിന്യ മാനേജ്മെന്റ് ലോഗിൻ";
-document.getElementById("subtitle").innerText="കേരള കാർബൺ ഫുട്പ്രിന്റ് നിരീക്ഷണ സംവിധാനം";
-
-document.querySelector("input[name='email']").placeholder="രജിസ്റ്റർ ചെയ്ത ഇമെയിൽ വിലാസം";
-document.querySelector("input[name='password']").placeholder="പാസ്വേഡ്";
-document.querySelector("input[name='aadhaar']").placeholder="ആധാർ നമ്പർ (12 അക്കങ്ങൾ)";
-
-document.getElementById("loginBtn").innerText="ലോഗിൻ ചെയ്യുക";
-
-document.getElementById("footerText").innerText="സുരക്ഷിത ലോഗിൻ. നിങ്ങളുടെ ആധാർ നമ്പർ എൻക്രിപ്റ്റ് ചെയ്തിരിക്കുന്നു.";
-
-}else{
-location.reload();
+    malayalam = !malayalam;
+    
+    if(malayalam){
+        document.querySelector(".language-btn").innerText="English";
+        
+        // Headers
+        document.getElementById("title").innerText="ജൈവമാലിന്യ വിലയിരുത്തൽ";
+        document.getElementById("subtitle").innerText="അടുക്കളയും പൂന്തോട്ട മാലിന്യ ട്രാക്കിംഗും";
+        
+        // Sections
+        document.getElementById("foodSection").innerText="🥕 ഭക്ഷണവും അടുക്കള മാലിന്യവും";
+        document.getElementById("gardenSection").innerText="🌿 പൂന്തോട്ട മാലിന്യം";
+        document.getElementById("otherSection").innerText="🔄 അധിക രീതികൾ";
+        
+        // Labels
+        document.getElementById("foodWasteLabel").innerText="പ്രതിദിനം എത്ര ഭക്ഷണ മാലിന്യം ഉണ്ടാകുന്നു?";
+        document.getElementById("foodNote").innerText="പച്ചക്കറി തൊലികൾ, ഭക്ഷണ അവശിഷ്ടങ്ങൾ ഉൾപ്പെടെ";
+        document.getElementById("compostLabel").innerText="ജൈവമാലിന്യം സംസ്കരിക്കാറുണ്ടോ?";
+        document.getElementById("gardenLabel").innerText="പൂന്തോട്ട മാലിന്യം ഉണ്ടോ? (ഇലകൾ, പുല്ല്, ചില്ലകൾ)";
+        document.getElementById("disposalLabel").innerText="പൂന്തോട്ട മാലിന്യം എങ്ങനെ നീക്കം ചെയ്യുന്നു?";
+        document.getElementById("cowLabel").innerText="അടുക്കള മാലിന്യം ഉപയോഗിക്കുന്ന കന്നുകാലികൾ ഉണ്ടോ?";
+        document.getElementById("leafLabel").innerText="ഇലകൾ കമ്പോസ്റ്റാക്കാറുണ്ടോ?";
+        
+        // Options - Food waste
+        const foodWaste = document.getElementById("foodWaste");
+        foodWaste.options[1].text = "250 ഗ്രാമിൽ കുറവ്";
+        foodWaste.options[2].text = "250 ഗ്രാം - 500 ഗ്രാം";
+        foodWaste.options[3].text = "500 ഗ്രാം - 1 കിലോ";
+        foodWaste.options[4].text = "1 കിലോയിൽ കൂടുതൽ";
+        
+        // Options - Compost
+        const compost = document.getElementById("compost");
+        compost.options[1].text = "വീട്ടിൽ കമ്പോസ്റ്റാക്കും";
+        compost.options[2].text = "ബയോഗ്യാസ്";
+        compost.options[3].text = "വെർമികമ്പോസ്റ്റ്";
+        compost.options[4].text = "കമ്മ്യൂണിറ്റി സൗകര്യം";
+        compost.options[5].text = "മാലിന്യ ശേഖരണത്തിന് നൽകും";
+        compost.options[6].text = "മറ്റ് മാലിന്യത്തോടൊപ്പം കലർത്തും";
+        
+        document.getElementById("submitBtn").innerText = "ജൈവമാലിന്യ വിവരങ്ങൾ സമർപ്പിക്കുക";
+        document.getElementById("backLink").innerHTML = "← പ്ലാസ്റ്റിക് മാലിന്യ വിലയിരുത്തലിലേക്ക് മടങ്ങുക";
+        document.getElementById("note").innerHTML = "🌱 ശരിയായ ജൈവമാലിന്യ സംസ്കരണം മീഥേൻ ഉദ്വമനം കുറയ്ക്കുകയും വിലയേറിയ കമ്പോസ്റ്റ് സൃഷ്ടിക്കുകയും ചെയ്യുന്നു!";
+        
+    } else {
+        location.reload();
+    }
 }
-
-}
-
 </script>
 
 </body>

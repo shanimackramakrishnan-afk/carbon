@@ -1,35 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>E-Waste Survey</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>E-Waste Assessment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add the same styling as your biodegradable.html for consistency */
+        body{
+            margin:0;
+            font-family:'Segoe UI', Arial, sans-serif;
+            background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+            url("https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+            background-size:cover;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .container{
+            background:white;
+            width:450px;
+            max-width:90%;
+            padding:35px;
+            border-radius:15px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+            margin:20px auto;
+        }
+        h2{
+            color:#2e7d32;
+            margin-bottom:5px;
+            text-align:center;
+        }
+        .subtitle{
+            font-size:14px;
+            color:#555;
+            margin-bottom:25px;
+            text-align:center;
+        }
+        label{
+            font-weight:600;
+            display:block;
+            margin-top:15px;
+            margin-bottom:5px;
+            color:#333;
+        }
+        select, input{
+            width:100%;
+            padding:12px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            font-size:14px;
+            background-color:white;
+            box-sizing:border-box;
+        }
+        button{
+            width:100%;
+            padding:14px;
+            margin-top:25px;
+            background:#2e7d32;
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-size:16px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        button:hover{
+            background:#1b5e20;
+        }
+        .back-link{
+            display:inline-block;
+            margin-top:15px;
+            text-decoration:none;
+            color:#2e7d32;
+            font-weight:600;
+            font-size:14px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>E-Waste Questionnaire</h2>
+<div class="container">
+    <h2>E-Waste Assessment</h2>
+    <div class="subtitle">Electronic Waste Tracking</div>
 
-<form action="/ewaste" method="POST">
+    <!-- FIXED: Changed action to ewaste_submit -->
+    <form action="{{ url_for('ewaste_submit') }}" method="POST">
 
-<label>Number of unused electronic devices:</label><br>
-<input type="number" name="devices" required><br><br>
+        <label>Number of unused electronic devices:</label>
+        <input type="number" name="old_devices" min="0" required>
 
-<label>Do you recycle e-waste properly?</label><br>
-<select name="ewaste_recycle" required>
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-</select><br><br>
+        <label>Do you recycle e-waste properly?</label>
+        <select name="disposal_method" required>
+            <option value="">Select option</option>
+            <option value="recycle">Yes, through authorized recycler</option>
+            <option value="store">No, I store them at home</option>
+            <option value="trash">No, I throw in regular trash</option>
+            <option value="sell">I sell to scrap dealer</option>
+        </select>
 
-<label>Type of common e-waste:</label><br>
-<select name="ewaste_type">
-    <option value="mobile">Mobile</option>
-    <option value="laptop">Laptop</option>
-    <option value="battery">Battery</option>
-    <option value="appliance">Appliance</option>
-</select><br><br>
+        <label>Type of common e-waste:</label>
+        <select name="old_devices_type" required>
+            <option value="">Select type</option>
+            <option value="mobile">Mobile Phones</option>
+            <option value="laptop">Laptops/Computers</option>
+            <option value="battery">Batteries</option>
+            <option value="appliance">Home Appliances</option>
+            <option value="multiple">Multiple types</option>
+        </select>
 
-<button type="submit">Submit</button>
+        <label>How many batteries do you dispose per month?</label>
+        <select name="batteries" required>
+            <option value="">Select</option>
+            <option value="none">None</option>
+            <option value="1-2">1-2</option>
+            <option value="3-5">3-5</option>
+            <option value="6+">6+</option>
+        </select>
 
-</form>
+        <button type="submit">Submit E-Waste Data</button>
+
+        <div style="text-align:center; margin-top:15px;">
+            <a href="{{ url_for('biodegradable') }}" class="back-link">← Back to Biodegradable Waste</a>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
