@@ -4,6 +4,7 @@
     <title>Submission Successful</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <h2>Data Submitted Successfully</h2>
@@ -12,10 +13,14 @@
 
 <p>Your responses have been recorded for carbon footprint analysis.</p>
 
+<p><b>Submission Time:</b></p>
+
+<p>{{ time }}</p>
+
 <br>
 
 <a href="/">
-    <button>Submit Another Response</button>
+<button>Submit Another Response</button>
 </a>
 
 </body>

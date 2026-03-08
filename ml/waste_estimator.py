@@ -1,90 +1,73 @@
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
 
-print("Loading dataset...")
+# -----------------------------
+# LOAD DATASET
+# -----------------------------
 
-df = pd.read_csv("datasets/FINAL_ML_READY_DATASET.csv")
+df = pd.read_csv("FINAL_ML_READY_DATASET(3).csv")
 
-print("Dataset loaded")
-print("Rows:", len(df))
+# -----------------------------
+# CREATE TARGET WASTE COLUMNS
+# -----------------------------
 
+df["bio_waste"] = (
+    df["food_waste"] * 0.6 +
+    df["garden_waste"] * 0.4 +
+    df["family_size"] * 0.2
+)
 
-# ---------------- WASTE ESTIMATION ----------------
+df["plastic_waste"] = (
+    df["milk_packets"] * 0.4 +
+    df["bottles"] * 0.4 +
+    df["deliveries"] * 0.2
+)
 
-def estimate_waste(row):
-
-    # ---------------- PLASTIC WASTE ----------------
-
-    milk_plastic = row["milk_packets"] * 5 * 30
-    delivery_plastic = row["deliveries"] * 50
-
-    plastic_kg = (milk_plastic + delivery_plastic) / 1000
-
-    # Plastic risk multiplier (plastic is highly harmful)
-    plastic_weighted = plastic_kg * 2.2
-
-
-    # ---------------- BIO WASTE ----------------
-
-    food_map = {
-        "less_250g": 5,
-        "250g_500g": 10,
-        "500g_1kg": 20,
-        "more_1kg": 30
-    }
-
-    bio_kg = food_map.get(row["food_waste"], 10)
-
-    # Bio waste multiplier (normal)
-    bio_weighted = bio_kg * 1.0
-
-
-    # ---------------- E-WASTE ----------------
-
-    battery_map = {
-        "none": 0,
-        "1-2": 0.1,
-        "3-5": 0.25,
-        "6+": 0.5
-    }
-
-    ewaste_kg = (row["old_devices"] * 1.5) + battery_map.get(row["batteries"], 0)
-
-    # E-waste toxicity multiplier
-    ewaste_weighted = ewaste_kg * 1.3
-
-
-    # ---------------- TOTAL WASTE ----------------
-
-    total = plastic_weighted + bio_weighted + ewaste_weighted
-
-
-    return pd.Series([
-        plastic_kg,
-        bio_kg,
-        ewaste_kg,
-        total
-    ])
-
-
-print("Estimating monthly waste...")
-
-df[
-    [
-        "plastic_waste_kg",
-        "bio_waste_kg",
-        "ewaste_kg",
-        "monthly_waste_kg"
-    ]
-] = df.apply(estimate_waste, axis=1)
+df["e_waste"] = (
+    df["old_devices"] * 0.7 +
+    df["batteries"] * 0.3
+)
 
 print("Waste columns created")
 
+# -----------------------------
+# CREATE FRAUD PENALTY WEIGHT
+# -----------------------------
 
-# Save dataset
-df.to_csv("datasets/2000_household_waste_dataset.csv", index=False)
+df["fraud_penalty_weight"] = 1 - df["fraud_probability"]
 
-print("Saved dataset with waste columns")
+print("Fraud penalty weight created")
 
-pd.set_option('display.max_columns', None)
+# -----------------------------
+# APPLY PENALTY TO WASTE
+# -----------------------------
 
-print(df.head())
+df["bio_waste_adjusted"] = df["bio_waste"] * df["fraud_penalty_weight"]
+df["plastic_waste_adjusted"] = df["plastic_waste"] * df["fraud_penalty_weight"]
+df["e_waste_adjusted"] = df["e_waste"] * df["fraud_penalty_weight"]
+
+print("Fraud penalty applied to waste")
+
+# -----------------------------
+# NORMALIZE FINAL TARGETS
+# -----------------------------
+
+scaler = MinMaxScaler()
+
+target_cols = [
+    "bio_waste_adjusted",
+    "plastic_waste_adjusted",
+    "e_waste_adjusted"
+]
+
+df[target_cols] = scaler.fit_transform(df[target_cols])
+
+print("Adjusted waste normalized")
+
+# -----------------------------
+# SAVE DATASET
+# -----------------------------
+
+df.to_csv("datasets/DATASET_WITH_TARGETS.csv", index=False)
+
+print("Final dataset saved successfully")

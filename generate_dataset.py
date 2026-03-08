@@ -3,7 +3,7 @@ import random
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
-DATABASE_PATH = "database/waste.db"
+DATABASE_PATH = "waste.db"
 
 # ---------------- OPTIONS ----------------
 
@@ -219,7 +219,7 @@ def export_to_csv():
 
     df = pd.read_sql_query(query, conn)
 
-    df.to_csv("2000_household_dataset.csv", index=False)
+    df.to_csv("AI_cleaned_household_dataset.csv", index=False)
 
     conn.close()
 
@@ -231,7 +231,7 @@ def export_to_csv():
 
 def clean_dataset():
 
-    df = pd.read_csv("2000_household_dataset.csv")
+    df = pd.read_csv("AI_cleaned_household_dataset.csv")
 
     print("Before Cleaning:", len(df))
 
@@ -239,7 +239,7 @@ def clean_dataset():
 
     print("After Cleaning:", len(df_cleaned))
 
-    df_cleaned.to_csv("2000_household_dataset_cleaned.csv", index=False)
+    df_cleaned.to_csv("AI_cleaned_household_dataset.csv", index=False)
 
     print("Duplicates removed")
 
@@ -248,7 +248,7 @@ def clean_dataset():
 
 def prepare_ml_dataset():
 
-    df = pd.read_csv("2000_household_dataset_cleaned.csv")
+    df = pd.read_csv("AI_cleaned_household_dataset.csv")
 
     print("Original Shape:", df.shape)
 
@@ -283,7 +283,7 @@ def prepare_ml_dataset():
 
     # Save Final Dataset
 
-    df.to_csv("FINAL_ML_READY_DATASET.csv", index=False)
+    df.to_csv("FINAL_ML_READY_DATASET(2).csv", index=False)
 
     print("Final ML Dataset Saved")
 
@@ -296,7 +296,7 @@ def prepare_ml_dataset():
 
 if __name__ == "__main__":
 
-    generate_dataset(2000)
+    generate_dataset()
 
     export_to_csv()
 

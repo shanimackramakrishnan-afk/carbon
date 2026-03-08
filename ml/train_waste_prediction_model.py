@@ -1,77 +1,56 @@
 import pandas as pd
 import numpy as np
-import os
-import joblib
 import matplotlib.pyplot as plt
-
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+from sklearn.multioutput import MultiOutputRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
+import joblib
 
-from waste_estimator import estimate_waste   # IMPORT ESTIMATOR
+# -----------------------------
+# LOAD DATASET
+# -----------------------------
 
-print("Loading Dataset...")
+df = pd.read_csv("datasets/DATASET_WITH_TARGETS.csv")
 
-df = pd.read_csv("datasets/FINAL_ML_READY_DATASET.csv")
+# -----------------------------
+# DEFINE FEATURES
+# -----------------------------
 
-print("Dataset Loaded Successfully")
-print("Dataset Shape:", df.shape)
-
-# ---------------- CREATE WASTE COLUMNS ----------------
-
-print("Estimating Monthly Waste...")
-
-df[
-    [
-        "plastic_waste_kg",
-        "bio_waste_kg",
-        "ewaste_kg",
-        "monthly_waste_kg"
-    ]
-] = df.apply(estimate_waste, axis=1)
-
-print("Waste columns created")
-
-# ---------------- ENCODE CATEGORICAL COLUMNS ----------------
-
-categorical_columns = [
+feature_cols = [
+    "family_size",
     "house_type",
-    "district",
-    "oil_type",
-    "segregation",
+    "milk_packets",
+    "deliveries",
+    "bottles",
     "food_waste",
-    "compost",
     "garden_waste",
-    "disposal_method"
+    "old_devices",
+    "batteries",
+    "segregation",
+    "compost",
+    "disposal_method",
+    "family_size_encoded",
+    "batteries_encoded"
 ]
 
-label_encoders = {}
+X = df[feature_cols]
 
-for col in categorical_columns:
-    encoder = LabelEncoder()
-    df[col] = encoder.fit_transform(df[col])
-    label_encoders[col] = encoder
+# -----------------------------
+# DEFINE TARGETS
+# -----------------------------
 
-print("Categorical Encoding Completed")
+target_cols = [
+    "bio_waste_adjusted",
+    "plastic_waste_adjusted",
+    "e_waste_adjusted"
+]
 
-# ---------------- DEFINE FEATURES ----------------
-# IMPORTANT: Remove derived waste columns
+y = df[target_cols]
 
-X = df.drop(columns=[
-    "user_email",
-    "plastic_waste_kg",
-    "bio_waste_kg",
-    "ewaste_kg",
-    "monthly_waste_kg"
-])
-
-y = df["monthly_waste_kg"]
-
-print("Training Features:")
-print(X.columns)
-
-# ---------------- TRAIN TEST SPLIT ----------------
+# -----------------------------
+# TRAIN TEST SPLIT
+# -----------------------------
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -80,75 +59,83 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42
 )
 
-print("Training Size:", len(X_train))
-print("Testing Size:", len(X_test))
+# -----------------------------
+# CREATE MODEL
+# -----------------------------
 
-# ---------------- TRAIN MODEL ----------------
-
-model = RandomForestRegressor(
+base_model = RandomForestRegressor(
     n_estimators=200,
+    max_depth=10,
+    min_samples_split=5,
+    min_samples_leaf=3,
+    max_features="sqrt",
     random_state=42
 )
 
+model = MultiOutputRegressor(base_model)
+
+# -----------------------------
+# TRAIN MODEL
+# -----------------------------
+
 model.fit(X_train, y_train)
 
-print("Model Training Completed")
+print("Model training completed")
 
-# ---------------- PREDICTION ----------------
+# -----------------------------
+# PREDICT
+# -----------------------------
 
 y_pred = model.predict(X_test)
 
-# ---------------- PERFORMANCE ----------------
+# -----------------------------
+# EVALUATE MODEL
+# -----------------------------
 
 mae = mean_absolute_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
 
-print("\nModel Performance")
-print("MAE:", mae)
+print("Mean Absolute Error:", mae)
 print("R2 Score:", r2)
 
-# ---------------- FEATURE IMPORTANCE ----------------
+# -----------------------------
+# SAVE MODEL
+# -----------------------------
 
-importance = model.feature_importances_
-features = X.columns
+joblib.dump(model, "waste_prediction_model.pkl")
+
+print("Model saved successfully")
+
+# ---------------------------------------------------
+# WASTE BEHAVIOUR IMPACT GRAPH
+# ---------------------------------------------------
+
+# Collect feature importance from each waste model
+importances = []
+
+for estimator in model.estimators_:
+    importances.append(estimator.feature_importances_)
+
+# Average importance across all outputs
+mean_importance = np.mean(importances, axis=0)
 
 importance_df = pd.DataFrame({
-    "Feature": features,
-    "Importance": importance
-}).sort_values(by="Importance", ascending=False)
+    "Feature": feature_cols,
+    "Impact": mean_importance
+})
 
-print("\nFeature Importance Ranking")
-print(importance_df)
+importance_df = importance_df.sort_values(by="Impact", ascending=True)
 
-# ---------------- FEATURE IMPORTANCE GRAPH ----------------
+# -----------------------------
+# PLOT BEHAVIOUR IMPACT GRAPH
+# -----------------------------
 
 plt.figure(figsize=(10,6))
+plt.barh(importance_df["Feature"], importance_df["Impact"])
 
-plt.barh(
-    importance_df["Feature"],
-    importance_df["Importance"]
-)
-
-plt.xlabel("Importance")
-plt.ylabel("Features")
-plt.title("AI Feature Importance for Waste Prediction")
-
-plt.gca().invert_yaxis()
+plt.title("Waste Behaviour Impact on Waste Generation")
+plt.xlabel("Impact Score")
+plt.ylabel("Household Behaviour")
 
 plt.tight_layout()
-
 plt.show()
-
-# ---------------- SAVE MODEL ----------------
-
-os.makedirs("models", exist_ok=True)
-
-joblib.dump(model, "models/waste_prediction_model.pkl")
-
-print("\nModel saved successfully")
-
-# ---------------- SAVE ENCODERS ----------------
-
-joblib.dump(label_encoders, "models/label_encoders.pkl")
-
-print("Encoders saved successfully")
