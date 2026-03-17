@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History - EcoScan</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0f0e;
+    --surface: #131918;
+    --surface2: #1c2421;
+    --border: rgba(255,255,255,0.07);
+    --green: #3ddc84;
+    --amber: #f5a623;
+    --red: #e8453c;
+    --blue: #4da6ff;
+    --text: #e8f0ec;
+    --muted: #7a9488;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    min-height: 100vh;
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .nav-logo {
+    font-family: var(--font-head);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--green);
+  }
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .nav-user {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .nav-logout {
+    color: var(--muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .nav-logout:hover {
+    color: var(--text);
+  }
+  .btn-sm {
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .btn-sm:hover {
+    border-color: var(--muted);
+  }
+
+  /* Layout */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .page-title {
+    font-family: var(--font-head);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 28px;
+  }
+  .page-title span {
+    color: var(--green);
+  }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th {
+    color: var(--muted);
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--surface2);
+  }
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  /* Index cell */
+  .td-index {
+    color: var(--muted);
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .badge-green  { background: rgba(61,220,132,0.15);  color: var(--green); }
+  .badge-amber  { background: rgba(245,166,35,0.15);  color: var(--amber); }
+  .badge-red    { background: rgba(232,69,60,0.15);   color: var(--red);   }
+
+  /* Score text colors — replaces inline Jinja2 style="color:..." */
+  .score-good   { color: var(--green); font-weight: 600; }
+  .score-medium { color: var(--amber); font-weight: 600; }
+  .score-poor   { color: var(--red);   font-weight: 600; }
+
+  /* Empty state */
+  .empty {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+  }
+  .empty-link {
+    color: var(--green);
+    text-decoration: none;
+  }
+  .empty-link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">EcoScan</div>
+  <div class="nav-links">
+    <span class="nav-user">{{ user_name }}</span>
+    <a href="/results" class="btn-sm">Latest Results</a>
+    <a href="/logout" class="nav-logout">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-title">Submission <span>History</span></div>
+
+  {% if records %}
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Fraud</th>
+          <th>Severity</th>
+          <th>Carbon Score</th>
+          <th>Carbon Level</th>
+          <th>Bio Waste</th>
+          <th>Plastic</th>
+          <th>E-Waste</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for r in records %}
+        <tr>
+
+          <td class="td-index">{{ loop.index }}</td>
+
+          <td>{{ r.date_time }}</td>
+
+          {# Fraud flag cell #}
+          <td>
+            {% if r.fraud_flag %}
+              <span class="badge badge-red">FRAUD</span>
+            {% else %}
+              <span class="badge badge-green">CLEAN</span>
+            {% endif %}
+          </td>
+
+          {# Fraud severity cell #}
+          <td>
+            {% if r.fraud_severity and r.fraud_severity != 'NONE' %}
+              {% if r.fraud_severity == 'SEVERE' %}
+                <span class="badge badge-red">SEVERE</span>
+              {% else %}
+                <span class="badge badge-amber">{{ r.fraud_severity }}</span>
+              {% endif %}
+            {% else %}
+              &mdash;
+            {% endif %}
+          </td>
+
+          {# Carbon score — uses CSS class instead of inline Jinja2 style #}
+          <td>
+            {% if r.carbon_trust_score >= 70 %}
+              <span class="score-good">{{ r.carbon_trust_score }}</span>
+            {% elif r.carbon_trust_score >= 40 %}
+              <span class="score-medium">{{ r.carbon_trust_score }}</span>
+            {% else %}
+              <span class="score-poor">{{ r.carbon_trust_score }}</span>
+            {% endif %}
+          </td>
+
+          {# Carbon level badge #}
+          <td>
+            {% if 'EXCELLENT' in r.carbon_level or 'GOOD' in r.carbon_level %}
+              <span class="badge badge-green">{{ r.carbon_level }}</span>
+            {% elif 'FRAUD' in r.carbon_level %}
+              <span class="badge badge-red">{{ r.carbon_level }}</span>
+            {% else %}
+              <span class="badge badge-amber">{{ r.carbon_level }}</span>
+            {% endif %}
+          </td>
+
+          <td>{{ r.bio_waste }}</td>
+          <td>{{ r.plastic_waste }}</td>
+          <td>{{ r.e_waste }}</td>
+
+          {# Risk level badge #}
+          <td>
+            {% if r.risk_level == 'LOW' %}
+              <span class="badge badge-green">LOW</span>
+            {% elif r.risk_level == 'MODERATE' %}
+              <span class="badge badge-amber">MODERATE</span>
+            {% else %}
+              <span class="badge badge-red">{{ r.risk_level }}</span>
+            {% endif %}
+          </td>
+
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+
+  {% else %}
+  <div class="empty">
+    No submissions yet.
+    <a href="/plastic" class="empty-link">Submit your first entry</a>
+  </div>
+  {% endif %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Results - EcoScan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <style>
+    :root {
+      --bg:         #0b0f0e;
+      --surface:    #131918;
+      --surface2:   #1c2421;
+      --border:     rgba(255, 255, 255, 0.07);
+      --green:      #3ddc84;
+      --green-dim:  #1e5c3a;
+      --amber:      #f5a623;
+      --red:        #e8453c;
+      --blue:       #4da6ff;
+      --text:       #e8f0ec;
+      --muted:      #7a9488;
+      --font-head:  'Syne', sans-serif;
+      --font-body:  'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.5px;
+    }
+    .nav-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .nav-user {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover {
+      color: var(--text);
+    }
+    .btn-sm {
+      background: var(--green-dim);
+      color: var(--green);
+      border: 1px solid var(--green-dim);
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-sm:hover {
+      background: var(--green);
+      color: #000;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 36px;
+    }
+    .page-title {
+      font-family: var(--font-head);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .page-title-accent {
+      color: var(--green);
+    }
+    .page-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .submitted-badge {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card-mb {
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* ── Grids ── */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      nav     { padding: 14px 20px; }
+    }
+
+    /* ── Metric cards ── */
+    .metric {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .metric-label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .metric-value {
+      font-family: var(--font-head);
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .metric-value-md {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1;
+      margin-top: 4px;
+    }
+    .metric-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── Color utilities ── */
+    .val-green { color: var(--green); }
+    .val-blue  { color: var(--blue);  }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .badge-green {
+      background: rgba(61, 220, 132, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(61, 220, 132, 0.3);
+    }
+    .badge-amber {
+      background: rgba(245, 166, 35, 0.15);
+      color: var(--amber);
+      border: 1px solid rgba(245, 166, 35, 0.3);
+    }
+    .badge-red {
+      background: rgba(232, 69, 60, 0.15);
+      color: var(--red);
+      border: 1px solid rgba(232, 69, 60, 0.3);
+    }
+
+    /* ── Progress bars ── */
+    .progress-wrap {
+      background: var(--surface2);
+      border-radius: 8px;
+      height: 10px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 8px;
+      transition: width 0.6s ease;
+    }
+    .fill-green { background: var(--green); }
+    .fill-amber { background: var(--amber); }
+    .fill-red   { background: var(--red);   }
+
+    .progress-wrap-thin {
+      background: var(--surface2);
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .progress-fill-thin {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    /* ── Fraud banner ── */
+    .fraud-banner {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 1px solid transparent;
+    }
+    .fraud-none {
+      background: rgba(61, 220, 132, 0.08);
+      border-color: rgba(61, 220, 132, 0.2);
+    }
+    .fraud-minor {
+      background: rgba(245, 166, 35, 0.08);
+      border-color: rgba(245, 166, 35, 0.2);
+    }
+    .fraud-moderate {
+      background: rgba(232, 100, 40, 0.08);
+      border-color: rgba(232, 100, 40, 0.2);
+    }
+    .fraud-severe {
+      background: rgba(232, 69, 60, 0.10);
+      border-color: rgba(232, 69, 60, 0.3);
+    }
+    .fraud-icon {
+      font-size: 22px;
+      min-width: 28px;
+    }
+    .fraud-text h3 {
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .fraud-text p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .fraud-badge-wrap {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* ── Section labels ── */
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .section-num {
+      background: var(--green-dim);
+      color: var(--green);
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* ── Tip box ── */
+    .tip-box {
+      background: var(--surface2);
+      border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+    .tip-box strong {
+      color: var(--text);
+    }
+
+    /* ── Score bar labels ── */
+    .score-hint {
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .score-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── Waste table ── */
+    .waste-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .waste-table th {
+      color: var(--muted);
+      font-weight: 500;
+      text-align: left;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .waste-table td {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .waste-table tr:last-child td {
+      border-bottom: none;
+    }
+    .td-green { color: var(--green); }
+    .td-blue  { color: var(--blue);  }
+    .td-amber { color: var(--amber); }
+
+    /* ── Chart ── */
+    .chart-wrap {
+      position: relative;
+      height: 200px;
+    }
+
+    /* ── Disease risk ── */
+    .risk-center {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .risk-level-text {
+      font-family: var(--font-head);
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .risk-low      { color: var(--green); }
+    .risk-moderate { color: var(--amber); }
+    .risk-high     { color: #f07000;      }
+    .risk-critical { color: var(--red);   }
+    .risk-unknown  { color: var(--muted); }
+
+    .risk-sublabel {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    .risk-badge-wrap {
+      margin-top: 16px;
+    }
+
+    .disease-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .disease-row:last-child {
+      border-bottom: none;
+    }
+    .disease-name   { flex: 1; font-size: 14px; }
+    .disease-bar    { flex: 2; }
+    .disease-status { min-width: 70px; text-align: right; }
+
+    /* ── Action buttons ── */
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover {
+      opacity: 0.85;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">EcoScan</div>
+  <div class="nav-right">
+    <span class="nav-user">{{ user_name }}</span>
+    <a href="/history" class="btn-sm">History</a>
+    <a href="/logout" class="nav-link">Logout</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- Page header -->
+  <div class="page-header">
+    <div>
+      <div class="page-title">
+        Your Waste <span class="page-title-accent">Analysis</span>
+      </div>
+      <div class="page-meta">{{ user_email }}</div>
+    </div>
+    <div class="submitted-badge">
+      Analysed<br>
+      {% if ml.submitted_at %}
+        {{ ml.submitted_at }}
+      {% else %}
+        just now
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       FRAUD BANNER
+  ══════════════════════════════════ -->
+  {% if ml is mapping and ml.fraud is defined and ml.fraud is mapping %}
+    {% set fraud_sev  = ml.fraud.severity %}
+    {% set fraud_prob = ml.fraud.probability %}
+    {% set fraud_flag = ml.fraud.flag %}
+  {% else %}
+    {% set fraud_sev  = ml.fraud_severity  | default("NONE") %}
+    {% set fraud_prob = ml.fraud_probability | default(0) %}
+    {% set fraud_flag = ml.fraud_flag        | default(0) %}
+  {% endif %}
+
+  {% if fraud_sev == "MINOR" %}
+    {% set banner_cls = "fraud-minor" %}
+  {% elif fraud_sev == "MODERATE" %}
+    {% set banner_cls = "fraud-moderate" %}
+  {% elif fraud_sev == "SEVERE" %}
+    {% set banner_cls = "fraud-severe" %}
+  {% else %}
+    {% set banner_cls = "fraud-none" %}
+  {% endif %}
+
+  <div class="fraud-banner {{ banner_cls }}">
+    <div class="fraud-icon">
+      {% if fraud_flag == 0 %}
+        [OK]
+      {% elif fraud_sev == "MINOR" %}
+        [!]
+      {% else %}
+        [!!]
+      {% endif %}
+    </div>
+    <div class="fraud-text">
+      {% if fraud_flag == 0 %}
+        <h3>Data Verified</h3>
+        <p>Your submission appears consistent. No anomalies detected.</p>
+      {% else %}
+        <h3>Anomaly Detected - {{ fraud_sev }} ({{ fraud_prob }}%)</h3>
+        <p>Unusual patterns found. Carbon score and waste data have been adjusted.</p>
+      {% endif %}
+    </div>
+    <div class="fraud-badge-wrap">
+      {% if fraud_flag == 0 %}
+        <span class="badge badge-green">CLEAN</span>
+      {% elif fraud_sev == "MINOR" %}
+        <span class="badge badge-amber">MINOR</span>
+      {% elif fraud_sev == "MODERATE" %}
+        <span class="badge badge-amber">MODERATE</span>
+      {% else %}
+        <span class="badge badge-red">SEVERE</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECTION 1 — CARBON SCORE
+  ══════════════════════════════════ -->
+  {% if ml is mapping and ml.carbon is defined and ml.carbon is mapping %}
+    {% set c_pts   = ml.carbon.points %}
+    {% set c_trust = ml.carbon.trust_score %}
+    {% set c_level = ml.carbon.level %}
+    {% set eco     = ml.carbon.eco_star %}
+  {% else %}
+    {% set c_pts   = ml.carbon_points      | default(0) %}
+    {% set c_trust = ml.carbon_trust_score | default(0) %}
+    {% set c_level = ml.carbon_level       | default("AVERAGE") %}
+    {% set eco     = 0 %}
+  {% endif %}
+
+  <div class="section-label">
+    <div class="section-num">1</div> Carbon Score
+  </div>
+
+  <div class="grid-4">
+
+    <div class="metric">
+      <div class="metric-label">Trust Score</div>
+      <div class="metric-value val-green">{{ c_trust }}</div>
+      <div class="metric-sub">out of 100</div>
+    </div>
+
+    <div class="metric">
+      <div class="metric-label">Carbon Level</div>
+      <div class="metric-value-md">
+        {% if 'EXCELLENT' in c_level or 'GOOD' in c_level %}
+          <span class="badge badge-green">{{ c_level }}</span>
+        {% elif 'FRAUD' in c_level %}
+          <span class="badge badge-red">{{ c_level }}</span>
+        {% else %}
+          <span class="badge badge-amber">{{ c_level }}</span>
+        {% endif %}
+      </div>
+      <div class="metric-sub">environmental rating</div>
+    </div>
+
+    <div class="metric">
+      <div class="metric-label">Raw Points</div>
+      <div class="metric-value val-blue">{{ c_pts }}</div>
+      <div class="metric-sub">before normalisation</div>
+    </div>
+
+    <div class="metric">
+      <div class="metric-label">Eco Star</div>
+      <div class="metric-value" style="font-size: 24px;">
+        {% if eco %}★{% else %}-{% endif %}
+      </div>
+      <div class="metric-sub">
+        {% if eco %}
+          triple green +20%
+        {% else %}
+          compost + segregate + recycle
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card card-mb">
+    <div class="card-title">Score Breakdown</div>
+    <div class="score-hint">Carbon Trust Score</div>
+
+    <div class="progress-wrap" id="carbonProgressWrap"
+         data-score="{{ c_trust }}"
+         data-level="{% if c_trust >= 80 %}green{% elif c_trust >= 50 %}amber{% else %}red{% endif %}">
+      <div class="progress-fill" id="carbonProgressFill"></div>
+    </div>
+
+    <div class="score-labels">
+      <span>0 - Critical</span>
+      <span>40 - Average</span>
+      <span>80 - Excellent</span>
+    </div>
+
+    {% if c_trust < 40 %}
+      <div class="tip-box">
+        <strong>Improve your score:</strong>
+        Start composting (+15 pts), segregate waste (+20 pts), switch to recycling (+15 pts).
+      </div>
+    {% elif c_trust < 70 %}
+      <div class="tip-box">
+        <strong>Good progress!</strong>
+        Add recycling disposal and reduce delivery packaging to reach EXCELLENT.
+      </div>
+    {% else %}
+      <div class="tip-box">
+        <strong>Excellent!</strong>
+        You are in the top tier. Consider sharing your practices with neighbours.
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECTION 2 — WASTE ESTIMATES
+  ══════════════════════════════════ -->
+  {% if ml is mapping and ml.waste is defined and ml.waste is mapping %}
+    {% set bio_1m  = ml.waste.bio %}
+    {% set pla_1m  = ml.waste.plastic %}
+    {% set ew_1m   = ml.waste.ewaste %}
+    {% set bio_3m  = ml.waste.bio_3m %}
+    {% set pla_3m  = ml.waste.plastic_3m %}
+    {% set ew_3m   = ml.waste.ewaste_3m %}
+    {% set bio_12m = ml.waste.bio_12m %}
+    {% set pla_12m = ml.waste.plastic_12m %}
+    {% set ew_12m  = ml.waste.ewaste_12m %}
+  {% else %}
+    {% set bio_1m  = ml.bio_waste     | default(0) %}
+    {% set pla_1m  = ml.plastic_waste | default(0) %}
+    {% set ew_1m   = ml.e_waste       | default(0) %}
+    {% set bio_3m  = ml.bio_3m        | default(0) %}
+    {% set pla_3m  = ml.plastic_3m    | default(0) %}
+    {% set ew_3m   = ml.ewaste_3m     | default(0) %}
+    {% set bio_12m = ml.bio_12m       | default(0) %}
+    {% set pla_12m = ml.plastic_12m   | default(0) %}
+    {% set ew_12m  = ml.ewaste_12m    | default(0) %}
+  {% endif %}
+
+  <div class="section-label">
+    <div class="section-num">2</div> Waste Estimates
+  </div>
+
+  <div class="grid-2">
+
+    <div class="card">
+      <div class="card-title">Projected Waste (adjusted units)</div>
+      <table class="waste-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>1 Month</th>
+            <th>3 Months</th>
+            <th>12 Months</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bio</td>
+            <td><span class="td-green">{{ bio_1m }}</span></td>
+            <td>{{ bio_3m }}</td>
+            <td>{{ bio_12m }}</td>
+          </tr>
+          <tr>
+            <td>Plastic</td>
+            <td><span class="td-blue">{{ pla_1m }}</span></td>
+            <td>{{ pla_3m }}</td>
+            <td>{{ pla_12m }}</td>
+          </tr>
+          <tr>
+            <td>E-Waste</td>
+            <td><span class="td-amber">{{ ew_1m }}</span></td>
+            <td>{{ ew_3m }}</td>
+            <td>{{ ew_12m }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Monthly Trend (12 months)</div>
+      <div class="chart-wrap">
+        <canvas id="wasteChart"
+          data-bio="{{ bio_1m | default(0) }}"
+          data-plastic="{{ pla_1m | default(0) }}"
+          data-ewaste="{{ ew_1m | default(0) }}">
+        </canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════
+       SECTION 3 — DISEASE RISK
+  ══════════════════════════════════ -->
+  {% if ml is mapping and ml.disease is defined and ml.disease is mapping %}
+    {% set risk_lvl = ml.disease.risk_level %}
+    {% set d_preds  = ml.disease.predictions %}
+    {% set d_probas = ml.disease.probabilities %}
+  {% else %}
+    {% set risk_lvl = ml.risk_level | default("UNKNOWN") %}
+    {% set d_preds  = {
+      "dengue":      ml.dengue_risk      | default(0),
+      "cholera":     ml.cholera_risk     | default(0),
+      "typhoid":     ml.typhoid_risk     | default(0),
+      "respiratory": ml.respiratory_risk | default(0),
+      "toxic":       ml.toxic_risk       | default(0)
+    } %}
+    {% set d_probas = {
+      "dengue":      ml.dengue_prob      | default(0.0),
+      "cholera":     ml.cholera_prob     | default(0.0),
+      "typhoid":     ml.typhoid_prob     | default(0.0),
+      "respiratory": ml.respiratory_prob | default(0.0),
+      "toxic":       ml.toxic_prob       | default(0.0)
+    } %}
+  {% endif %}
+
+  <div class="section-label">
+    <div class="section-num">3</div> Disease Risk Prediction
+  </div>
+
+  <div class="grid-2">
+
+    <!-- Overall risk card -->
+    <div class="card">
+      <div class="card-title">Overall Risk Level</div>
+      <div class="risk-center">
+
+        {% if risk_lvl == 'LOW' %}
+          <div class="risk-level-text risk-low">LOW</div>
+        {% elif risk_lvl == 'MODERATE' %}
+          <div class="risk-level-text risk-moderate">MODERATE</div>
+        {% elif risk_lvl == 'HIGH' %}
+          <div class="risk-level-text risk-high">HIGH</div>
+        {% elif risk_lvl == 'CRITICAL' %}
+          <div class="risk-level-text risk-critical">CRITICAL</div>
+        {% else %}
+          <div class="risk-level-text risk-unknown">{{ risk_lvl }}</div>
+        {% endif %}
+
+        <div class="risk-sublabel">Public Health Risk Assessment</div>
+
+        <div class="risk-badge-wrap">
+          {% if risk_lvl == 'LOW' %}
+            <span class="badge badge-green">Low public health risk</span>
+          {% elif risk_lvl == 'MODERATE' %}
+            <span class="badge badge-amber">Moderate risk - take precautions</span>
+          {% elif risk_lvl == 'HIGH' %}
+            <span class="badge badge-amber">High risk - action required</span>
+          {% else %}
+            <span class="badge badge-red">Critical - immediate attention</span>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Disease indicators card -->
+    <div class="card">
+      <div class="card-title">Disease-specific Risk Indicators</div>
+
+      {% set disease_list = [
+        ("Dengue",       "dengue"),
+        ("Cholera",      "cholera"),
+        ("Typhoid",      "typhoid"),
+        ("Respiratory",  "respiratory"),
+        ("Toxic Exp.",   "toxic")
+      ] %}
+
+      {% for d_name, d_key in disease_list %}
+
+        {% if d_preds is mapping %}
+          {% set pred = d_preds.get(d_key, 0) %}
+        {% else %}
+          {% set pred = 0 %}
+        {% endif %}
+
+        {% if d_probas is mapping %}
+          {% set prob = d_probas.get(d_key, 0.0) %}
+        {% else %}
+          {% set prob = 0.0 %}
+        {% endif %}
+
+        {% set pct = (prob * 100) | round | int %}
+
+        <div class="disease-row">
+          <span class="disease-name">{{ d_name }}</span>
+
+          <div class="disease-bar">
+            <div class="progress-wrap-thin">
+              <div class="progress-fill-thin"
+                   data-pct="{{ pct }}"
+                   data-risk="{{ pred }}">
+              </div>
+            </div>
+          </div>
+
+          <div class="disease-status">
+            {% if pred == 1 %}
+              <span class="badge badge-red">AT RISK</span>
+            {% else %}
+              <span class="badge badge-green">LOW</span>
+            {% endif %}
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <a href="/history"     class="btn-primary">View History</a>
+    <a href="/plastic"     class="btn-outline">New Entry</a>
+    <a href="/api/results" class="btn-outline" target="_blank">Export JSON</a>
+    <a href="/logout"      class="btn-outline">Logout</a>
+  </div>
+
+</div>
+
+<!-- Chart script — zero Jinja2 inside script tag, values read from data attributes -->
+<script>
+
+  /* ── Progress bars: set width + colour from data attributes ── */
+  (function() {
+    /* Carbon trust bar */
+    var wrap  = document.getElementById("carbonProgressWrap");
+    var fill  = document.getElementById("carbonProgressFill");
+    if (wrap && fill) {
+      var score = parseFloat(wrap.getAttribute("data-score")) || 0;
+      var level = wrap.getAttribute("data-level") || "red";
+      fill.style.width = score + "%";
+      fill.classList.add("fill-" + level);
+    }
+
+    /* Disease risk bars */
+    var bars = document.querySelectorAll(".progress-fill-thin[data-pct]");
+    for (var i = 0; i < bars.length; i++) {
+      var bar  = bars[i];
+      var pct  = parseFloat(bar.getAttribute("data-pct"))  || 0;
+      var risk = parseInt(bar.getAttribute("data-risk"), 10) || 0;
+      bar.style.width = pct + "%";
+      bar.classList.add(risk === 1 ? "fill-red" : "fill-green");
+    }
+  })();
+
+  var canvas      = document.getElementById("wasteChart");
+  var b1m         = parseFloat(canvas.getAttribute("data-bio"))     || 0;
+  var p1m         = parseFloat(canvas.getAttribute("data-plastic")) || 0;
+  var e1m         = parseFloat(canvas.getAttribute("data-ewaste"))  || 0;
+  var monthLabels = ["Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb"];
+  var bioS        = [1.00, 1.10, 1.20, 1.05, 0.95, 0.90, 1.00, 1.00, 0.95, 1.00, 1.10, 1.15];
+  var plasS       = [1.00, 1.00, 1.00, 1.00, 1.05, 1.05, 1.10, 1.05, 1.00, 1.00, 1.10, 1.20];
+  var ewS         = [0.90, 0.90, 1.00, 1.00, 1.00, 1.00, 0.90, 0.90, 1.00, 1.10, 1.20, 1.40];
+  var bioData     = bioS.map( function(s) { return Math.round(b1m * s * 1000) / 1000; });
+  var plasticData = plasS.map(function(s) { return Math.round(p1m * s * 1000) / 1000; });
+  var ewasteData  = ewS.map(  function(s) { return Math.round(e1m * s * 1000) / 1000; });
+
+  new Chart(document.getElementById("wasteChart"), {
+    type: "line",
+    data: {
+      labels: monthLabels,
+      datasets: [
+        {
+          label: "Bio",
+          data: bioData,
+          borderColor: "#3ddc84",
+          backgroundColor: "rgba(61,220,132,0.08)",
+          tension: 0.3,
+          pointRadius: 2,
+          fill: true
+        },
+        {
+          label: "Plastic",
+          data: plasticData,
+          borderColor: "#4da6ff",
+          backgroundColor: "rgba(77,166,255,0.08)",
+          tension: 0.3,
+          pointRadius: 2,
+          fill: true
+        },
+        {
+          label: "E-Waste",
+          data: ewasteData,
+          borderColor: "#f5a623",
+          backgroundColor: "rgba(245,166,35,0.08)",
+          tension: 0.3,
+          pointRadius: 2,
+          fill: true
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        x: {
+          ticks: { color: "#7a9488", font: { size: 10 } },
+          grid:  { color: "rgba(255,255,255,0.05)" }
+        },
+        y: {
+          ticks: { color: "#7a9488", font: { size: 10 } },
+          grid:  { color: "rgba(255,255,255,0.05)" }
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

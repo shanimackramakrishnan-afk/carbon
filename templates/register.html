@@ -1,150 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Create Account | Waste Management</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - EcoScan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #0b0f0e;
+      --surface:   #131918;
+      --surface2:  #1c2421;
+      --border:    rgba(255, 255, 255, 0.07);
+      --green:     #3ddc84;
+      --green-dim: #1e5c3a;
+      --red:       #e8453c;
+      --text:      #e8f0ec;
+      --muted:     #7a9488;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
 
-<style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-    margin:0;
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
-    background-size:cover;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-.container{
-    background:white;
-    width:420px;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.4);
-    text-align:center;
-}
+    /* Nav */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .nav-link:hover {
+      color: var(--text);
+    }
 
-h2{
-    color:#2e7d32;
-}
+    /* Page */
+    .page {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
 
-input{
-    width:100%;
-    padding:12px;
-    margin-top:10px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
+    /* Card */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 44px;
+      width: 100%;
+      max-width: 460px;
+    }
 
-input:focus{
-    border-color:#2e7d32;
-    outline:none;
-}
+    .card-header {
+      margin-bottom: 32px;
+    }
+    .card-title {
+      font-family: var(--font-head);
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .card-title span {
+      color: var(--green);
+    }
+    .card-sub {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-button{
-    width:100%;
-    padding:12px;
-    margin-top:20px;
-    background:#2e7d32;
-    color:white;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-    cursor:pointer;
-}
+    /* Form */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 8px;
+    }
+    .form-input {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 14px;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-input::placeholder {
+      color: var(--muted);
+    }
+    .form-input:focus {
+      border-color: var(--green);
+    }
 
-button:hover{
-    background:#1b5e20;
-}
+    /* Password wrapper with show/hide toggle */
+    .input-wrap {
+      position: relative;
+    }
+    .input-wrap .form-input {
+      padding-right: 44px;
+    }
+    .toggle-pass {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 13px;
+      padding: 0;
+      line-height: 1;
+    }
+    .toggle-pass:hover {
+      color: var(--text);
+    }
 
-.language-btn{
-    position:absolute;
-    top:20px;
-    right:20px;
-    background:white;
-    border:none;
-    padding:6px 14px;
-    border-radius:20px;
-    cursor:pointer;
-    font-weight:600;
-}
+    /* Helper text */
+    .form-hint {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 5px;
+    }
 
-.login-link{
-    margin-top:15px;
-}
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
 
-.login-link a{
-    text-decoration:none;
-    color:#2e7d32;
-    font-weight:600;
-}
+    /* Submit button */
+    .btn-submit {
+      width: 100%;
+      background: var(--green);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-submit:hover {
+      opacity: 0.88;
+    }
+    .btn-submit:active {
+      opacity: 0.75;
+    }
 
-</style>
+    /* Login link */
+    .login-row {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .login-row a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .login-row a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 500px) {
+      .card        { padding: 28px 22px; }
+      nav          { padding: 14px 20px; }
+      .card-title  { font-size: 22px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<button class="language-btn" onclick="toggleLanguage()">മലയാളം</button>
+<nav>
+  <a href="/" class="nav-logo">EcoScan</a>
+  <a href="/" class="nav-link">Login</a>
+</nav>
 
-<div class="container">
+<div class="page">
+  <div class="card">
 
-<h2 id="title">Create User Account</h2>
-<form action="{{ url_for('register_submit') }}" method="POST">
+    <div class="card-header">
+      <div class="card-title">Create your <span>account</span></div>
+      <div class="card-sub">Join EcoScan to track your household waste and carbon score.</div>
+    </div>
 
-<input type="text" name="name" placeholder="Full Name" required>
+    <form action="/register_submit" method="POST">
 
-<input type="email" name="email" placeholder="Email Address" required>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name</label>
+        <input
+          class="form-input"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          required
+          autocomplete="name">
+      </div>
 
-<input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Mobile Number (10 digits)" required>
+      <!-- Email -->
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          autocomplete="email">
+      </div>
 
-<input type="text" name="aadhaar" pattern="[0-9]{12}" maxlength="12" placeholder="Aadhaar Number (12 digits)" required>
+      <!-- Password -->
+      <div class="form-group">
+        <label class="form-label" for="password">Password</label>
+        <div class="input-wrap">
+          <input
+            class="form-input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+            autocomplete="new-password">
+          <button type="button" class="toggle-pass" id="togglePass">Show</button>
+        </div>
+        <div class="form-hint">Minimum 6 characters recommended.</div>
+      </div>
 
-<input type="password" name="password" placeholder="Create Password" required>
+      <!-- Aadhaar -->
+      <div class="form-group">
+        <label class="form-label" for="aadhaar">Aadhaar Number</label>
+        <input
+          class="form-input"
+          type="text"
+          id="aadhaar"
+          name="aadhaar"
+          placeholder="12-digit Aadhaar number"
+          maxlength="12"
+          pattern="[0-9]{12}"
+          required
+          autocomplete="off">
+        <div class="form-hint">Your 12-digit government-issued Aadhaar ID.</div>
+      </div>
 
-<button type="submit" id="createBtn">Register</button>
+      <div class="divider"></div>
 
-</form>
-<div style="margin-top:15px;">
-    <a href="{{ url_for('login') }}" 
-       style="text-decoration:none;color:#2e7d32;font-weight:600;">
-        Already have an account? Login
-    </a>
+      <button type="submit" class="btn-submit">Create Account</button>
+
+    </form>
+
+    <div class="login-row">
+      Already have an account? <a href="/">Sign in</a>
+    </div>
+
+  </div>
 </div>
 
-</div>
+<footer>
+  EcoScan &copy; 2024 &mdash; Waste Intelligence Platform
+</footer>
 
 <script>
+  var toggleBtn  = document.getElementById("togglePass");
+  var passInput  = document.getElementById("password");
 
-let malayalam=false;
+  toggleBtn.addEventListener("click", function() {
+    if (passInput.type === "password") {
+      passInput.type   = "text";
+      toggleBtn.textContent = "Hide";
+    } else {
+      passInput.type   = "password";
+      toggleBtn.textContent = "Show";
+    }
+  });
 
-function toggleLanguage(){
-
-malayalam=!malayalam;
-
-if(malayalam){
-
-document.querySelector(".language-btn").innerText="English";
-document.getElementById("title").innerText="ഉപയോക്തൃ അക്കൗണ്ട് സൃഷ്ടിക്കുക";
-
-document.querySelector("input[name='name']").placeholder="പൂർണ്ണ പേര്";
-document.querySelector("input[name='email']").placeholder="ഇമെയിൽ വിലാസം";
-document.querySelector("input[name='mobile']").placeholder="മൊബൈൽ നമ്പർ (10 അക്കങ്ങൾ)";
-document.querySelector("input[name='aadhaar']").placeholder="ആധാർ നമ്പർ (12 അക്കങ്ങൾ)";
-document.querySelector("input[name='password']").placeholder="പാസ്‌വേഡ് സൃഷ്ടിക്കുക";
-
-document.getElementById("createBtn").innerText="രജിസ്റ്റർ ചെയ്യുക";
-document.getElementById("loginLink").innerText="ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യുക";
-
-}else{
-location.reload();
-}
-
-}
-
+  /* Aadhaar — allow digits only */
+  document.getElementById("aadhaar").addEventListener("input", function() {
+    this.value = this.value.replace(/[^0-9]/g, "");
+  });
 </script>
 
 </body>

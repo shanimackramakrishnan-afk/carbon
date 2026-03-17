@@ -1,0 +1,6 @@
+bio_waste_adjusted              ADF=-7.1864  p=0.0000  → Stationary [OK]
+plastic_waste_adjusted          ADF=-7.3048  p=0.0000  → Stationary [OK]
+e_waste_adjusted                ADF=-2.6207  p=0.0888  → Non-Stationary [FAIL]
+Bio Waste: AIC=-153.41  BIC=-144.96  Autocorrelation in residuals (p=0.0000)
+Plastic Waste: AIC=-139.97  BIC=-131.53  Autocorrelation in residuals (p=0.0000)
+E-Waste: AIC=-157.89  BIC=-149.57  Autocorrelation in residuals (p=0.0437)
